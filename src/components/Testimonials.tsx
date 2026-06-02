@@ -43,15 +43,17 @@ export default function Testimonials() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.055] border border-white/[0.055]">
         {testimonials.map((t, i) => (
-          <FadeIn key={i} delay={i * 0.08} className="bg-[#0d0d11] p-7 flex flex-col justify-between gap-6">
-            <div>
+          <FadeIn key={i} delay={i * 0.08} className="bg-[#0d0d11] p-7 flex flex-col h-full">
+            {/* Quote — crece para ocupar el espacio disponible */}
+            <div className="flex-1 mb-6">
               <div className="text-[#5b8bff] text-2xl font-serif mb-4 leading-none">"</div>
               <p className="font-mono text-[0.73rem] text-[#8888a0] leading-[1.85] italic">
                 {t.quote}
               </p>
             </div>
 
-            <div className="flex items-center gap-3 pt-4 border-t border-white/[0.055]">
+            {/* Firma — siempre al fondo */}
+            <div className="flex items-center gap-3 pt-4 border-t border-white/[0.055] mt-auto">
               <div className="w-9 h-9 rounded-[3px] bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1 shrink-0">
                 <Image
                   src={t.logo}
