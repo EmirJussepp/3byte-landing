@@ -36,7 +36,7 @@ export default function Testimonials() {
           Lo que dicen{" "}
           <span className="text-[#2e2e3a]">quienes lo usan.</span>
         </h2>
-        <p className="font-mono text-[0.78rem] text-[#55556a] mb-12 max-w-[480px] leading-relaxed">
+        <p className="font-mono text-[0.78rem] text-[#55556a] mb-12 leading-relaxed">
           Negocios de San Francisco que trabajan con sistemas desarrollados por 3Byte.
         </p>
       </FadeIn>

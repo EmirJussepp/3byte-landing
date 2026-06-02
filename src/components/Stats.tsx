@@ -1,8 +1,8 @@
 const items = [
   { label: "Sistemas en producción" },
-  { label: "Años desarrollando software" },
+  { label: "Experiencia en software" },
   { label: "Proyectos entregados" },
-  { label: "Disponibles para nuevos proyectos", live: true },
+  { label: "Disponibles para proyectos", live: true },
 ];
 
 export default function Stats() {
@@ -12,10 +12,10 @@ export default function Stats() {
         {items.map((item, i) => (
           <div
             key={i}
-            className="flex-1 min-w-[50%] md:min-w-0 px-6 md:px-8 py-5 border-r border-white/[0.055] last:border-r-0 border-b md:border-b-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r flex items-center gap-2.5"
+            className="flex-1 min-w-[50%] md:min-w-0 px-6 md:px-8 py-4 border-r border-white/[0.055] last:border-r-0 border-b md:border-b-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r flex items-center gap-2.5 h-12"
           >
             {item.live && <span className="dot-live shrink-0" />}
-            <span className="font-mono text-[0.65rem] text-[#55556a] uppercase tracking-[0.08em] leading-snug">
+            <span className="font-mono text-[0.6rem] text-[#55556a] uppercase tracking-[0.07em] leading-none whitespace-nowrap">
               {item.label}
             </span>
           </div>
