@@ -15,9 +15,30 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "3Byte — Software que funciona",
+  title: "3Byte — Software a medida para PyMEs argentinas",
   description:
-    "Sistemas de gestión a medida, productos SaaS e integraciones reales — todo en producción, para clientes reales.",
+    "Construimos sistemas de gestión, productos SaaS e integraciones reales para negocios argentinos. Sin agencias, sin plantillas. San Francisco, Córdoba.",
+  keywords: ["software a medida", "sistemas de gestión", "desarrollo web argentina", "SaaS córdoba", "software PyME"],
+  authors: [{ name: "3Byte" }],
+  creator: "3Byte",
+  metadataBase: new URL("https://www.grupo3byte.com"),
+  openGraph: {
+    title: "3Byte — Tu negocio merece un sistema propio",
+    description: "Software a medida para PyMEs y negocios argentinos. Del primer llamado al sistema en producción.",
+    url: "https://www.grupo3byte.com",
+    siteName: "3Byte",
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Byte — Software a medida",
+    description: "Software a medida para PyMEs y negocios argentinos.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
