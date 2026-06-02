@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 const links = [
   { label: "Proyectos", id: "proyectos" },
-  { label: "Stack", id: "stack" },
   { label: "Nosotros", id: "nosotros" },
+  { label: "Proceso", id: "proceso" },
 ];
 
 export default function Nav() {

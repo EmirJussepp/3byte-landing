@@ -23,9 +23,9 @@ export default function Home() {
       <Projects />
       <Testimonials />
       <Proceso />
-      <Stack />
       <Nosotros />
       <Contact />
+      <Stack />
       <Footer />
       <WhatsAppButton />
     </>
