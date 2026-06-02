@@ -16,7 +16,7 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          border: "1px solid rgba(91,139,255,0.3)",
+          border: "1px solid rgba(167,139,250,0.3)",
         }}
       >
         <span
@@ -24,7 +24,7 @@ export default function Icon() {
             fontFamily: "monospace",
             fontWeight: 800,
             fontSize: 13,
-            color: "#5b8bff",
+            color: "#a78bfa",
             letterSpacing: "-0.05em",
             lineHeight: 1,
           }}
