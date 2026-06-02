@@ -28,8 +28,8 @@ export default function Hero() {
       <div className="flex gap-6 items-start mb-10 max-w-[600px]">
         <div className="w-px bg-[#a78bfa]/40 self-stretch mt-1 shrink-0" />
         <p className="font-mono text-[0.82rem] text-[#8888a0] leading-[1.85]">
-          Construimos software a medida para PyMEs y negocios de servicios argentinos.
-          Sin agencias, sin plantillas, sin promesas. Del primer llamado al sistema en producción.
+          Desarrollamos software a medida para PyMEs y negocios de servicios argentinos.
+          Código propio, comunicación directa y sistemas que realmente se usan.
         </p>
       </div>
 

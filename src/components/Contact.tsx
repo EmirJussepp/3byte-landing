@@ -36,7 +36,7 @@ export default function Contact() {
           Hablemos.
         </h2>
         <p className="font-mono text-[0.78rem] text-[#55556a] mb-12 max-w-[480px] leading-relaxed">
-          Contanos qué necesitás construir. Respondemos rápido — somos un grupo chico, no una mesa de ayuda.
+          Contanos qué necesitás construir. Respondemos rápido y con ganas de entender bien lo que necesitás.
         </p>
       </FadeIn>
 

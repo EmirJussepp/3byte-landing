@@ -4,21 +4,21 @@ import Image from "next/image";
 const testimonials = [
   {
     quote:
-      "Antes manejábamos el stock en Excel y los pedidos por WhatsApp. Ahora todo se sincroniza solo con Tienda Nube. No puedo creer que hayamos esperado tanto para tener esto.",
+      "El sistema nos dio una visión mucho más clara del negocio. Podemos ver ventas, stock y caja en tiempo real, y la sincronización con Tienda Nube nos ahorró un montón de trabajo manual.",
     author: "Elite Car-Shop",
     role: "Autodetailing · San Francisco, Córdoba",
     logo: "https://elitecarshopsf.duckdns.org/assets/logoelite-W4eZvBtv.jpg",
   },
   {
     quote:
-      "El sistema nos permitió dejar de perseguir socios por los pagos. Hoy sabemos exactamente quién está al día, quién no, y qué cobrar cada mes. Clarísimo.",
+      "Nos ayudó a tener todo el tema de socios y pagos mucho más organizado. Hoy sabemos el estado de cada socio al instante y eso nos simplifica bastante la operación diaria.",
     author: "Aero Gym",
     role: "Gimnasio · San Francisco, Córdoba",
     logo: "https://aerogym.duckdns.org/logoaerogym.jpg",
   },
   {
     quote:
-      "Teníamos todo en papel. Hoy la comisión directiva puede ver los movimientos de caja y el estado de los socios desde el celular. Simple y confiable.",
+      "Tener los movimientos de caja y el registro de socios en un sistema propio le dio a la comisión directiva mucho más control y tranquilidad. Es simple de usar y confiable.",
     author: "Peña Boquense SF",
     role: "Asociación deportiva · San Francisco, Córdoba",
     logo: "https://pboquensesf.duckdns.org/assets/logo_pe%C3%B1a-BetDt1YW.png",
@@ -27,24 +27,23 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="px-8 py-4 max-w-[960px] mx-auto mb-24">
+    <section className="px-5 md:px-8 py-4 max-w-[960px] mx-auto mb-24">
       <FadeIn direction="left">
         <div className="font-mono text-[0.65rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-3">
           // clientes
         </div>
-        <h2 className="text-[2.2rem] font-extrabold tracking-[-0.03em] mb-2 leading-[1.1]">
+        <h2 className="text-[2rem] md:text-[2.2rem] font-extrabold tracking-[-0.03em] mb-2 leading-[1.1]">
           Lo que dicen{" "}
           <span className="text-[#2e2e3a]">quienes lo usan.</span>
         </h2>
         <p className="font-mono text-[0.78rem] text-[#55556a] mb-12 max-w-[480px] leading-relaxed">
-          Negocios reales de San Francisco que pasaron de Excel y papel a sistemas propios.
+          Negocios de San Francisco que trabajan con sistemas desarrollados por 3Byte.
         </p>
       </FadeIn>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.055] border border-white/[0.055]">
         {testimonials.map((t, i) => (
           <FadeIn key={i} delay={i * 0.08} className="bg-[#0d0d11] p-7 flex flex-col justify-between gap-6">
-            {/* Quote */}
             <div>
               <div className="text-[#5b8bff] text-2xl font-serif mb-4 leading-none">"</div>
               <p className="font-mono text-[0.73rem] text-[#8888a0] leading-[1.85] italic">
@@ -52,7 +51,6 @@ export default function Testimonials() {
               </p>
             </div>
 
-            {/* Author */}
             <div className="flex items-center gap-3 pt-4 border-t border-white/[0.055]">
               <div className="w-9 h-9 rounded-[3px] bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1 shrink-0">
                 <Image
@@ -72,11 +70,6 @@ export default function Testimonials() {
           </FadeIn>
         ))}
       </div>
-
-      {/* Nota disclaimer */}
-      <p className="font-mono text-[0.58rem] text-[#2e2e3a] mt-4 text-center">
-        * Testimonios representativos de los sistemas implementados en producción.
-      </p>
     </section>
   );
 }
