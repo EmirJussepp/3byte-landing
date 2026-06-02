@@ -48,7 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${syne.variable} ${jetbrainsMono.variable}`}>
-      <body className="min-h-full bg-[#09090c] text-[#eeeef3] font-syne overflow-x-hidden">
+      <body className="min-h-full bg-[#09090c] text-[#eeeef3] font-syne overflow-x-hidden md:cursor-none">
         {children}
       </body>
     </html>

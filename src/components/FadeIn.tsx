@@ -17,9 +17,9 @@ export default function FadeIn({
 }: FadeInProps) {
   const initial =
     direction === "up"
-      ? { opacity: 0, y: 28 }
+      ? { opacity: 0, y: 24 }
       : direction === "left"
-      ? { opacity: 0, x: -20 }
+      ? { opacity: 0, x: -16 }
       : { opacity: 0 };
 
   return (
@@ -27,8 +27,12 @@ export default function FadeIn({
       className={className}
       initial={initial}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+      viewport={{ once: true, margin: "-48px" }}
+      transition={{
+        duration: 0.55,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
       {children}
     </motion.div>
