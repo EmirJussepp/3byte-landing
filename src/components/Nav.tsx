@@ -51,9 +51,8 @@ export default function Nav() {
                 unoptimized
               />
             </div>
-            <span className="font-mono text-[0.92rem] font-bold tracking-tight">
-              <span className="text-[#eaeaf0]">3</span>
-              <span className="text-[#a78bfa]">byte</span>
+            <span className="font-mono text-[0.92rem] font-bold tracking-tight text-[#eaeaf0] group-hover:text-white transition-colors">
+              3byte
             </span>
           </button>
 
