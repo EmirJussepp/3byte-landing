@@ -1,4 +1,5 @@
 import FadeIn from "./FadeIn";
+import ContactForm from "./ContactForm";
 
 const links = [
   {
@@ -39,53 +40,71 @@ export default function Contact() {
         </p>
       </FadeIn>
 
-      <FadeIn>
-        <div className="bg-[#0d0d11] border border-white/[0.055] p-10 flex gap-16 flex-wrap items-start">
+      <div className="flex flex-col gap-px">
 
-          {/* Izquierda: texto */}
-          <div className="flex-1 min-w-[240px]">
-            <div className="font-mono text-[0.65rem] text-[#55556a] tracking-[0.1em] uppercase mb-5">
-              Trabajamos con
+        {/* Formulario */}
+        <FadeIn>
+          <div className="bg-[#0d0d11] border border-white/[0.055] p-8 mb-px">
+            <div className="font-mono text-[0.6rem] text-[#55556a] tracking-[0.1em] uppercase mb-6">
+              Escribinos directamente
             </div>
-            <ul className="flex flex-col gap-3 font-mono text-[0.75rem] text-[#8888a0] leading-relaxed">
-              {[
-                "Empresas que necesitan un sistema a medida",
-                "Negocios que quieren integrarse con su e-commerce",
-                "Clubes, gimnasios y asociaciones",
-                "Emprendedores con un producto SaaS en mente",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2.5">
-                  <span className="text-[#a78bfa] mt-0.5 shrink-0">→</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <ContactForm />
           </div>
+        </FadeIn>
 
-          {/* Derecha: links */}
-          <div className="flex flex-col gap-3 min-w-[240px]">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                target={l.href.startsWith("mailto") ? undefined : "_blank"}
-                rel="noopener noreferrer"
-                className={`flex items-center gap-4 px-5 py-4 border border-white/[0.07] text-[#55556a] transition-all duration-200 group ${l.hoverColor}`}
-              >
-                <span className="text-[1rem] leading-none">{l.ico}</span>
-                <div>
-                  <div className="font-mono text-[0.62rem] tracking-[0.08em] uppercase opacity-50 mb-0.5">
-                    {l.label}
+        {/* Links directos */}
+        <FadeIn delay={0.1}>
+          <div className="bg-[#0d0d11] border border-white/[0.055] p-8 flex flex-wrap gap-8 items-start">
+
+            {/* Trabajamos con */}
+            <div className="flex-1 min-w-[200px]">
+              <div className="font-mono text-[0.6rem] text-[#55556a] tracking-[0.1em] uppercase mb-4">
+                Trabajamos con
+              </div>
+              <ul className="flex flex-col gap-2.5 font-mono text-[0.72rem] text-[#8888a0] leading-relaxed">
+                {[
+                  "Empresas que necesitan un sistema a medida",
+                  "Negocios que quieren integrarse con su e-commerce",
+                  "Clubes, gimnasios y asociaciones",
+                  "Emprendedores con un producto SaaS en mente",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="text-[#a78bfa] shrink-0 mt-0.5">→</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Links */}
+            <div className="flex flex-col gap-2.5 min-w-[220px]">
+              <div className="font-mono text-[0.6rem] text-[#55556a] tracking-[0.1em] uppercase mb-1.5">
+                O contactanos por
+              </div>
+              {links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  target={l.href.startsWith("mailto") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-3 px-4 py-3 border border-white/[0.07] text-[#55556a] transition-all duration-200 ${l.hoverColor}`}
+                >
+                  <span className="text-[0.9rem] leading-none">{l.ico}</span>
+                  <div>
+                    <div className="font-mono text-[0.58rem] tracking-[0.08em] uppercase opacity-50 mb-0.5">
+                      {l.label}
+                    </div>
+                    <div className="font-mono text-[0.72rem] font-bold">
+                      {l.sub}
+                    </div>
                   </div>
-                  <div className="font-mono text-[0.78rem] font-bold">
-                    {l.sub}
-                  </div>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
+            </div>
+
           </div>
-        </div>
-      </FadeIn>
+        </FadeIn>
+      </div>
     </section>
   );
 }
