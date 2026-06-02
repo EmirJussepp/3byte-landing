@@ -18,7 +18,7 @@ export default function Hero() {
       <h1 className="text-[clamp(2.6rem,8vw,5.6rem)] font-extrabold leading-[0.96] tracking-[-0.045em] mb-8">
         <span className="text-[#eaeaf0]">Tu negocio merece</span>
         <br />
-        <span className="text-[#5b8bff]">{displayed}</span>
+        <span className="text-[#a78bfa]">{displayed}</span>
         {!done && <span className="cursor-blink" />}
       </h1>
 

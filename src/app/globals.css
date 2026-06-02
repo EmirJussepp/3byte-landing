@@ -55,7 +55,7 @@ body {
 .cursor-blink {
   display:inline-block;
   width:3px; height:0.82em;
-  background:var(--accent);
+  background:var(--accent2);
   margin-left:4px;
   vertical-align:middle;
   border-radius:1px;

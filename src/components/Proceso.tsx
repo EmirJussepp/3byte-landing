@@ -55,8 +55,8 @@ export default function Proceso() {
           >
             {/* Número — altura fija para alinear */}
             <div className="mb-5">
-              <div className="w-8 h-8 rounded-full border border-[#5b8bff]/30 flex items-center justify-center">
-                <span className="font-mono text-[0.6rem] text-[#5b8bff] font-bold">{p.n}</span>
+              <div className="w-8 h-8 rounded-full border border-[#a78bfa]/30 flex items-center justify-center">
+                <span className="font-mono text-[0.6rem] text-[#a78bfa] font-bold">{p.n}</span>
               </div>
             </div>
 

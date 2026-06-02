@@ -9,7 +9,7 @@ export default function BackgroundOrbs() {
           left: "-10vw",
           width: "60vw",
           height: "55vh",
-          background: "radial-gradient(ellipse at center, rgba(91,139,255,0.07) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse at center, rgba(167,139,250,0.07) 0%, transparent 70%)",
           filter: "blur(40px)",
         }}
       />
