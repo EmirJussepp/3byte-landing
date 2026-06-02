@@ -10,10 +10,12 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CustomCursor from "@/components/CustomCursor";
+import BackgroundOrbs from "@/components/BackgroundOrbs";
 
 export default function Home() {
   return (
     <>
+      <BackgroundOrbs />
       <CustomCursor />
       <Nav />
       <Hero />
