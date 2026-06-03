@@ -33,7 +33,7 @@ const projects = [
     logoH: 40,
     pills: ["Kotlin", "Ktor", "Vue 3", "PostgreSQL", "JWT"],
     badge: { label: "En producción", dot: "bg-[#34d399]", text: "text-[#34d399]" },
-    href: "https://pboquensesf.duckdns.org/movimientos",
+    href: null,
   },
   {
     num: "04",
