@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "elitecarshopsf.duckdns.org" },
       { protocol: "https", hostname: "aerogym.duckdns.org" },
       { protocol: "https", hostname: "turnero-club.vercel.app" },
+      { protocol: "https", hostname: "www.sportbyte.com.ar" },
       { protocol: "https", hostname: "pboquensesf.duckdns.org" },
     ],
   },

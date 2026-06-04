@@ -18,7 +18,7 @@ const logos = [
   },
   {
     name: "SportByte",
-    src: "https://turnero-club.vercel.app/logosolosportbyte.png",
+    src: "https://www.sportbyte.com.ar/logosolosportbyte.png",
     w: 100,
   },
 ];

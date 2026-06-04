@@ -40,11 +40,11 @@ const projects = [
     cat: "Producto SaaS propio",
     name: "SportByte",
     desc: "Plataforma de reservas para clubes deportivos. Calendario en tiempo real, turnos fijos automáticos, confirmaciones por WhatsApp y email, caja del día y estadísticas de ocupación. Multi-admin, activación en menos de un día. Pádel, fútbol, tenis y más.",
-    logo: "https://turnero-club.vercel.app/logosolosportbyte.png",
+    logo: "https://www.sportbyte.com.ar/logosolosportbyte.png",
     logoH: 38,
     pills: ["Next.js", "Vercel", "WhatsApp API", "Multi-admin", "Tiempo real"],
     badge: { label: "SaaS · activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
-    href: "https://www.sportbyte.com",
+    href: "https://www.sportbyte.com.ar",
   },
 ];
 
