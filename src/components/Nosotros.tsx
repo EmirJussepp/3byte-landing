@@ -35,7 +35,7 @@ export default function Nosotros() {
           <span className="text-[#2e2e3a]">que hace las cosas bien.</span>
         </h2>
         <p className="font-mono text-[0.78rem] text-[#55556a] mb-14 max-w-[520px] leading-relaxed">
-          Somos un grupo de San Francisco, Córdoba. Nos conocemos hace años
+          Somos un equipo de San Francisco, Córdoba. Nos conocemos hace años
           y trabajamos juntos en cada proyecto. Eso nos permite cuidar los
           detalles y responder con nombre propio.
         </p>
