@@ -44,7 +44,7 @@ const projects = [
     logoH: 38,
     pills: ["Next.js", "Vercel", "WhatsApp API", "Multi-admin", "Tiempo real"],
     badge: { label: "SaaS · activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
-    href: "https://turnero-club.vercel.app",
+    href: "https://www.sportbyte.com",
   },
 ];
 
