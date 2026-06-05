@@ -24,6 +24,10 @@ export async function sendContact(formData: {
 
   const { nombre, email, mensaje } = parsed.data;
 
+  // Escapar HTML para evitar inyección en el cuerpo del email
+  const esc = (str: string) =>
+    str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
   try {
     await resend.emails.send({
       from: "3Byte Web <onboarding@resend.dev>",
@@ -36,19 +40,19 @@ export async function sendContact(formData: {
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
               <td style="color: #8888a0; padding: 8px 0; width: 100px;">Nombre</td>
-              <td style="color: #eaeaf0; font-weight: bold;">${nombre}</td>
+              <td style="color: #eaeaf0; font-weight: bold;">${esc(nombre)}</td>
             </tr>
             <tr>
               <td style="color: #8888a0; padding: 8px 0;">Email</td>
-              <td style="color: #eaeaf0;"><a href="mailto:${email}" style="color: #5b8bff;">${email}</a></td>
+              <td style="color: #eaeaf0;"><a href="mailto:${esc(email)}" style="color: #5b8bff;">${esc(email)}</a></td>
             </tr>
             <tr>
               <td style="color: #8888a0; padding: 8px 0; vertical-align: top;">Mensaje</td>
-              <td style="color: #eaeaf0; line-height: 1.6;">${mensaje.replace(/\n/g, "<br/>")}</td>
+              <td style="color: #eaeaf0; line-height: 1.6;">${esc(mensaje).replace(/\n/g, "<br/>")}</td>
             </tr>
           </table>
           <hr style="border-color: #1a1a22; margin: 24px 0;" />
-          <p style="color: #55556a; font-size: 12px;">Respondé directamente a este mail para contactar a ${nombre}.</p>
+          <p style="color: #55556a; font-size: 12px;">Respondé directamente a este mail para contactar a ${esc(nombre)}.</p>
         </div>
       `,
     });
