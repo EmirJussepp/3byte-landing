@@ -26,8 +26,8 @@ const links: { icon: JSX.Element; label: string; sub: string; href: string; hove
   {
     icon: <WhatsAppIcon />,
     label: "WhatsApp",
-    sub: "+54 3564 301700",
-    href: "https://wa.me/543564301700",
+    sub: "+54 351 2762415",
+    href: "https://wa.me/543512762415",
     hoverColor: "hover:border-[#34d399] hover:text-[#34d399]",
   },
   {

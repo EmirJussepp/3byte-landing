@@ -29,7 +29,7 @@ const EmailIcon = () => (
 );
 
 const socials = [
-  { icon: <WhatsAppIcon />, href: "https://wa.me/543564301700", label: "WhatsApp", color: "hover:text-[#34d399]" },
+  { icon: <WhatsAppIcon />, href: "https://wa.me/543512762415", label: "WhatsApp", color: "hover:text-[#34d399]" },
   { icon: <InstagramIcon />, href: "https://instagram.com/grupo3byte_", label: "Instagram", color: "hover:text-[#a78bfa]" },
   { icon: <EmailIcon />, href: "mailto:grupo3byteapp@gmail.com", label: "Email", color: "hover:text-[#5b8bff]" },
 ];
