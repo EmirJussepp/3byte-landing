@@ -7,9 +7,10 @@ import { useState } from "react";
 import { sendContact } from "@/app/actions/contact";
 
 const schema = z.object({
-  nombre: z.string().min(2, "Nombre muy corto"),
-  email: z.string().email("Email inválido"),
-  mensaje: z.string().min(10, "El mensaje es muy corto"),
+  nombre: z.string().min(2, "Nombre muy corto").max(80, "Nombre muy largo"),
+  email: z.string().email("Email inválido").max(120, "Email muy largo"),
+  mensaje: z.string().min(10, "El mensaje es muy corto").max(3000, "El mensaje es muy largo"),
+  website: z.string().max(0).optional(),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -61,6 +62,16 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+
+      {/* Honeypot anti-spam: invisible para humanos, los bots lo completan */}
+      <input
+        {...register("website")}
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] top-[-9999px] w-px h-px opacity-0 pointer-events-none"
+      />
 
       {/* Nombre + Email en fila */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
