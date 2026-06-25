@@ -53,14 +53,15 @@ export default function Nav() {
 
   return (
     <>
-      <nav
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-[#08080b]/95 backdrop-blur-2xl shadow-[0_1px_0_0_rgba(255,255,255,0.055)]"
-            : "bg-[#08080b]/80 backdrop-blur-xl border-b border-white/[0.055]"
-        }`}
-      >
-        <div className="flex items-center justify-between px-5 md:px-8 py-3.5 max-w-[960px] mx-auto">
+      <nav className="sticky top-0 z-50 px-3 md:px-4 pt-3 md:pt-4">
+        <div
+          className={`max-w-[1000px] mx-auto rounded-2xl border backdrop-blur-xl transition-all duration-300 ${
+            scrolled
+              ? "bg-[#0d0d11]/85 border-white/[0.09] shadow-lg shadow-black/40"
+              : "bg-[#0d0d11]/55 border-white/[0.06]"
+          }`}
+        >
+        <div className="flex items-center justify-between pl-4 pr-3 md:pl-6 md:pr-3 py-2.5">
 
           {/* Logo */}
           <button
@@ -88,7 +89,7 @@ export default function Nav() {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="font-mono text-[0.67rem] text-[#55556a] tracking-[0.1em] uppercase font-bold hover:text-[#eaeaf0] transition-colors duration-200 cursor-pointer"
+                className="font-mono text-[0.67rem] text-[#8888a0] tracking-[0.1em] uppercase font-bold px-3 py-1.5 rounded-full hover:text-[#eaeaf0] hover:bg-white/[0.05] transition-all duration-200 cursor-pointer"
               >
                 {item.label}
               </button>
@@ -168,6 +169,7 @@ export default function Nav() {
               Contactar
             </button>
           </div>
+        </div>
         </div>
       </nav>
     </>
