@@ -37,13 +37,13 @@ export default function Hero() {
           <div className="flex gap-3 flex-wrap">
             <button
               onClick={() => scrollTo("contacto")}
-              className="inline-flex items-center gap-2 px-5 md:px-6 py-3 rounded-[3px] bg-[#5b8bff] text-white font-extrabold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] hover:-translate-y-px transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-full bg-[#5b8bff] text-white font-extrabold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] hover:-translate-y-px transition-all cursor-pointer"
             >
               Contanos tu proyecto →
             </button>
             <button
               onClick={() => scrollTo("proyectos")}
-              className="inline-flex items-center gap-2 px-5 md:px-6 py-3 rounded-[3px] bg-transparent text-[#55556a] border border-white/[0.11] font-bold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:text-[#eaeaf0] hover:border-white/25 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-full bg-transparent text-[#55556a] border border-white/[0.11] font-bold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:text-[#eaeaf0] hover:border-white/25 transition-all cursor-pointer"
             >
               Ver proyectos reales
             </button>

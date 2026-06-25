@@ -23,7 +23,7 @@ export default function Stack() {
   return (
     <section id="stack" className="px-5 md:px-8 py-8 md:py-14 max-w-[960px] mx-auto mb-28 md:mb-36">
       <FadeIn direction="left">
-        <div className="font-mono text-[0.65rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-3">
+        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-full border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
           // stack técnico
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">

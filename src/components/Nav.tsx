@@ -117,7 +117,7 @@ export default function Nav() {
             {/* CTA desktop */}
             <button
               onClick={() => scrollTo("contacto")}
-              className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-[3px] bg-[#5b8bff] text-white font-mono font-bold text-[0.65rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
+              className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#5b8bff] text-white font-mono font-bold text-[0.65rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
             >
               Contactar
             </button>
@@ -163,7 +163,7 @@ export default function Nav() {
             </div>
             <button
               onClick={() => scrollTo("contacto")}
-              className="mt-3 w-full py-3 rounded-[3px] bg-[#5b8bff] text-white font-mono font-bold text-[0.72rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
+              className="mt-3 w-full py-3 rounded-full bg-[#5b8bff] text-white font-mono font-bold text-[0.72rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
             >
               Contactar
             </button>
