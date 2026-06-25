@@ -9,7 +9,6 @@ import Nosotros from "@/components/Nosotros";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import CustomCursor from "@/components/CustomCursor";
 import BackgroundOrbs from "@/components/BackgroundOrbs";
 import Spotlight from "@/components/Spotlight";
 
@@ -18,7 +17,6 @@ export default function Home() {
     <>
       <BackgroundOrbs />
       <Spotlight />
-      <CustomCursor />
       <Nav />
       <Hero />
       <Stats />

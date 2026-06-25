@@ -42,7 +42,7 @@ export default function HeroVisual() {
           Sistemas en uso
         </div>
         <div className="font-mono text-[1.1rem] font-bold text-[#eaeaf0] leading-none">
-          4<span className="text-[#5b8bff]">+</span>
+          <span className="text-[#5b8bff]">+</span>10
         </div>
       </div>
     </div>
