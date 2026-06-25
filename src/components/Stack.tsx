@@ -21,15 +21,15 @@ const categories = [
 
 export default function Stack() {
   return (
-    <section id="stack" className="px-8 py-4 max-w-[960px] mx-auto mb-24">
+    <section id="stack" className="px-5 md:px-8 py-8 md:py-14 max-w-[960px] mx-auto mb-28 md:mb-36">
       <FadeIn direction="left">
         <div className="font-mono text-[0.65rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-3">
           // stack técnico
         </div>
-        <h2 className="text-[2.2rem] font-extrabold tracking-[-0.03em] mb-2 leading-[1.1]">
+        <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
           Con qué trabajamos
         </h2>
-        <p className="font-mono text-[0.78rem] text-[#55556a] mb-12 max-w-[480px] leading-relaxed">
+        <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-14 md:mb-16 max-w-[520px] leading-[1.9]">
           Herramientas que conocemos profundo, no las que están de moda.
         </p>
       </FadeIn>

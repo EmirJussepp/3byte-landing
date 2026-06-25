@@ -25,16 +25,16 @@ const valores = [
 
 export default function Nosotros() {
   return (
-    <section id="nosotros" className="px-5 md:px-8 py-4 max-w-[960px] mx-auto mb-24">
+    <section id="nosotros" className="px-5 md:px-8 py-8 md:py-14 max-w-[960px] mx-auto mb-28 md:mb-36">
       <FadeIn direction="left">
         <div className="font-mono text-[0.65rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-3">
           // quiénes somos
         </div>
-        <h2 className="text-[2rem] md:text-[2.2rem] font-extrabold tracking-[-0.03em] mb-2 leading-[1.1]">
+        <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
           Un grupo chico<br />
           <span className="text-[#2e2e3a]">que hace las cosas bien.</span>
         </h2>
-        <p className="font-mono text-[0.78rem] text-[#55556a] mb-14 max-w-[520px] leading-relaxed">
+        <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-14 md:mb-16 max-w-[520px] leading-[1.9]">
           Somos un equipo de San Francisco, Córdoba. Nos conocemos hace años
           y trabajamos juntos en cada proyecto. Eso nos permite cuidar los
           detalles y responder con nombre propio.
