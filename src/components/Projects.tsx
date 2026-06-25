@@ -54,7 +54,7 @@ export default function Projects() {
 
       <FadeIn direction="left">
         <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-full border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
-          // proyectos
+          proyectos
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
           Proyectos destacados

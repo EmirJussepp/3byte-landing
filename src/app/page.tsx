@@ -4,7 +4,6 @@ import Stats from "@/components/Stats";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import Proceso from "@/components/Proceso";
-import Stack from "@/components/Stack";
 import Nosotros from "@/components/Nosotros";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -25,7 +24,6 @@ export default function Home() {
       <Proceso />
       <Nosotros />
       <Contact />
-      <Stack />
       <Footer />
       <WhatsAppButton />
     </>

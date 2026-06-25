@@ -51,7 +51,7 @@ export default function Contact() {
     <section id="contacto" className="px-5 md:px-8 py-8 md:py-14 max-w-[960px] mx-auto mb-24 md:mb-32">
       <FadeIn direction="left">
         <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-full border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
-          // contacto
+          contacto
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
           Hablemos.
