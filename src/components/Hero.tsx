@@ -19,11 +19,18 @@ export default function Hero() {
             Desarrollo de software · San Francisco, Córdoba · Argentina
           </div>
 
-          <h1 className="text-[clamp(2.4rem,6vw,4.4rem)] font-extrabold leading-[0.98] tracking-[-0.045em] mb-8">
+          <h1 className="text-[clamp(2.4rem,6vw,4.4rem)] font-extrabold leading-[1.02] tracking-[-0.045em] mb-8">
             <span className="text-[#eaeaf0]">Tu negocio merece</span>
             <br />
-            <span className="text-[#a78bfa]">{displayed}</span>
-            {!done && <span className="cursor-blink" />}
+            {/* La copia invisible reserva el espacio del texto final → no hay
+                salto/reflujo mientras la animación va tipeando */}
+            <span className="relative inline-block align-top">
+              <span className="invisible" aria-hidden="true">un sistema propio.</span>
+              <span className="absolute inset-0 text-[#a78bfa]">
+                {displayed}
+                {!done && <span className="cursor-blink" />}
+              </span>
+            </span>
           </h1>
 
           <div className="flex gap-5 items-start mb-10 max-w-[520px]">
