@@ -10,6 +10,7 @@ const projects = [
     logo: "https://elitecarshopsf.duckdns.org/assets/logoelite-W4eZvBtv.jpg",
     logoH: 36,
     image: "/projects/elite-caja.png",
+    imgPos: "object-left-top",
     domain: "elitecarshopsf.duckdns.org",
     pills: ["Kotlin", "Ktor", "Vue 3", "PostgreSQL", "Tienda Nube API", "Webhooks"],
     badge: { label: "En producción", dot: "bg-[#34d399]", text: "text-[#34d399]" },
@@ -23,6 +24,7 @@ const projects = [
     logo: "https://aerogym.duckdns.org/logoaerogym.jpg",
     logoH: 36,
     image: "/projects/aero-dashboard.png",
+    imgPos: "object-top",
     domain: "aerogym.duckdns.org",
     pills: ["Kotlin", "Ktor", "Vue 3", "PostgreSQL", "JWT"],
     badge: { label: "En producción", dot: "bg-[#34d399]", text: "text-[#34d399]" },
@@ -36,6 +38,7 @@ const projects = [
     logo: "https://pboquensesf.duckdns.org/assets/logo_pe%C3%B1a-BetDt1YW.png",
     logoH: 40,
     image: "/projects/pena-dashboard.png",
+    imgPos: "object-top",
     domain: "pboquensesf.duckdns.org",
     pills: ["Kotlin", "Ktor", "Vue 3", "PostgreSQL", "JWT"],
     badge: { label: "En producción", dot: "bg-[#34d399]", text: "text-[#34d399]" },
@@ -49,6 +52,7 @@ const projects = [
     logo: "https://www.sportbyte.com.ar/logosolosportbyte.png",
     logoH: 38,
     image: "/projects/sportbyte.png",
+    imgPos: "object-top",
     domain: "sportbyte.com.ar",
     pills: ["Next.js", "Vercel", "WhatsApp API", "Multi-admin", "Tiempo real"],
     badge: { label: "SaaS · activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
@@ -98,7 +102,7 @@ export default function Projects() {
                           alt={`${p.name} — captura del sistema`}
                           fill
                           sizes="(max-width: 1024px) 100vw, 480px"
-                          className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                          className={`object-cover ${p.imgPos} group-hover:scale-[1.03] transition-transform duration-700 ease-out`}
                         />
                       </div>
                     </div>
@@ -136,17 +140,6 @@ export default function Projects() {
                   <p className="font-mono text-[0.78rem] text-[#8888a0] leading-[1.85] mb-5">
                     {p.desc}
                   </p>
-
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {p.pills.map((pill) => (
-                      <span
-                        key={pill}
-                        className="font-mono text-[0.58rem] bg-white/[0.03] text-[#8888a0] px-2.5 py-1 rounded-full border border-white/[0.07] tracking-wide"
-                      >
-                        {pill}
-                      </span>
-                    ))}
-                  </div>
 
                   {p.href && (
                     <a
