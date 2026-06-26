@@ -25,36 +25,52 @@ const testimonials = [
   },
 ];
 
+const QuoteIcon = () => (
+  <svg viewBox="0 0 32 24" fill="none" className="w-7 h-5 shrink-0" aria-hidden="true">
+    <path
+      d="M0 24V14.4C0 6.24 4.8 1.44 14.4 0l1.92 3.12C11.04 4.32 8.4 7.2 7.68 12H14.4V24H0ZM17.6 24V14.4C17.6 6.24 22.4 1.44 32 0l1.92 3.12C28.64 4.32 26 7.2 25.28 12H32V24H17.6Z"
+      fill="#5b8bff"
+      fillOpacity="0.35"
+    />
+  </svg>
+);
+
 export default function Testimonials() {
   return (
-    <section className="px-5 md:px-8 py-8 md:py-14 max-w-[960px] mx-auto mb-28 md:mb-36">
+    <section className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-28 md:mb-36">
       <FadeIn direction="left">
         <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-full border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
           clientes
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
           Lo que dicen{" "}
-          <span className="text-[#2e2e3a]">quienes lo usan.</span>
+          <span className="text-[#4a4a62]">quienes lo usan.</span>
         </h2>
-        <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-14 md:mb-16 leading-[1.9]">
+        <p className="text-[1rem] text-[#8888a0] mb-14 md:mb-16 leading-[1.8]">
           Negocios de San Francisco que trabajan con sistemas desarrollados por 3Byte.
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.055] border border-white/[0.055]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
         {testimonials.map((t, i) => (
-          <FadeIn key={i} delay={i * 0.08} className="bg-[#0d0d11] p-7 flex flex-col h-full">
-            {/* Quote — crece para ocupar el espacio disponible */}
-            <div className="flex-1 mb-6">
-              <div className="text-[#5b8bff] text-2xl font-serif mb-4 leading-none">"</div>
-              <p className="font-mono text-[0.73rem] text-[#8888a0] leading-[1.85] italic">
-                {t.quote}
-              </p>
+          <FadeIn
+            key={i}
+            delay={i * 0.08}
+            className="rounded-2xl border border-white/[0.07] bg-[#0d0d11] p-6 md:p-7 flex flex-col h-full"
+          >
+            {/* Comilla SVG real */}
+            <div className="mb-5">
+              <QuoteIcon />
             </div>
 
-            {/* Firma — siempre al fondo */}
-            <div className="flex items-center gap-3 pt-4 border-t border-white/[0.055] mt-auto">
-              <div className="w-9 h-9 rounded-[3px] bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1 shrink-0">
+            {/* Quote — texto legible en font-syne */}
+            <p className="flex-1 text-[0.95rem] text-[#b8b8cc] leading-[1.8] mb-7">
+              {t.quote}
+            </p>
+
+            {/* Firma */}
+            <div className="flex items-center gap-3 pt-5 border-t border-white/[0.06]">
+              <div className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1 shrink-0">
                 <Image
                   src={t.logo}
                   alt={t.author}
@@ -65,8 +81,8 @@ export default function Testimonials() {
                 />
               </div>
               <div>
-                <div className="text-[0.8rem] font-bold text-[#eaeaf0]">{t.author}</div>
-                <div className="font-mono text-[0.6rem] text-[#55556a] mt-0.5">{t.role}</div>
+                <div className="text-[0.88rem] font-semibold text-[#eaeaf0] leading-tight">{t.author}</div>
+                <div className="text-[0.75rem] text-[#55556a] mt-0.5 leading-tight">{t.role}</div>
               </div>
             </div>
           </FadeIn>

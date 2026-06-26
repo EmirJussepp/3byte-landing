@@ -29,46 +29,43 @@ const pasos = [
 
 export default function Proceso() {
   return (
-    <section id="proceso" className="px-5 md:px-8 py-8 md:py-14 max-w-[960px] mx-auto mb-28 md:mb-36">
+    <section id="proceso" className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-28 md:mb-36">
       <FadeIn direction="left">
         <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-full border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
           cómo trabajamos
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
           Del primer llamado<br />
-          <span className="text-[#2e2e3a]">al sistema en producción.</span>
+          <span className="text-[#4a4a62]">al sistema en producción.</span>
         </h2>
-        <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-14 md:mb-16 max-w-[520px] leading-[1.9]">
+        <p className="text-[1rem] text-[#8888a0] mb-14 md:mb-16 max-w-[480px] leading-[1.8]">
           Cuatro pasos. Sin vueltas.
         </p>
       </FadeIn>
 
-      {/* Grid con altura fija por fila para alinear todo */}
-      <div className="grid grid-cols-1 md:grid-cols-4 border border-white/[0.055]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
         {pasos.map((p, i) => (
           <FadeIn
             key={i}
             delay={i * 0.08}
-            className={`bg-[#0d0d11] p-6 flex flex-col border-white/[0.055] ${
-              i < 3 ? "md:border-r" : ""
-            } ${i < pasos.length - 1 ? "border-b md:border-b-0" : ""}`}
+            className="rounded-2xl border border-white/[0.07] bg-[#0d0d11] p-6 flex flex-col"
           >
-            {/* Número — altura fija para alinear */}
+            {/* Número */}
             <div className="mb-5">
-              <div className="w-8 h-8 rounded-full border border-[#a78bfa]/30 flex items-center justify-center">
-                <span className="font-mono text-[0.6rem] text-[#a78bfa] font-bold">{p.n}</span>
+              <div className="w-9 h-9 rounded-full border border-[#a78bfa]/30 bg-[#a78bfa]/[0.06] flex items-center justify-center">
+                <span className="font-mono text-[0.62rem] text-[#a78bfa] font-bold tracking-wider">{p.n}</span>
               </div>
             </div>
 
             {/* Contenido */}
-            <div className="flex-1 flex flex-col gap-2 mb-5">
-              <div className="text-[0.88rem] font-bold text-[#eaeaf0] leading-snug">{p.title}</div>
-              <p className="font-mono text-[0.7rem] text-[#8888a0] leading-[1.75]">{p.desc}</p>
+            <div className="flex-1 flex flex-col gap-2.5 mb-6">
+              <div className="text-[1rem] font-semibold text-[#eaeaf0] leading-snug">{p.title}</div>
+              <p className="text-[0.88rem] text-[#8888a0] leading-[1.75]">{p.desc}</p>
             </div>
 
             {/* Detail — siempre al fondo */}
-            <div className="pt-3 border-t border-white/[0.04]">
-              <span className="font-mono text-[0.58rem] text-[#a78bfa] tracking-wide whitespace-nowrap">
+            <div className="pt-4 border-t border-white/[0.06]">
+              <span className="font-mono text-[0.62rem] text-[#a78bfa] tracking-wide">
                 → {p.detail}
               </span>
             </div>
