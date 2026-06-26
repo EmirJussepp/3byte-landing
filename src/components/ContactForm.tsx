@@ -15,6 +15,11 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
+const inputBase =
+  "w-full bg-[#13131a] border text-[#eaeaf0] text-[0.92rem] placeholder:text-[#3a3a4a] outline-none transition-all duration-200 rounded-xl px-4 py-3";
+const inputIdle = "border-white/[0.08] focus:border-[#5b8bff]/50 focus:ring-2 focus:ring-[#5b8bff]/10";
+const inputError = "border-[#f87171]/60 focus:border-[#f87171] focus:ring-2 focus:ring-[#f87171]/10";
+
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -40,30 +45,34 @@ export default function ContactForm() {
 
   if (status === "ok") {
     return (
-      <div className="flex flex-col items-start gap-3 py-8">
-        <div className="flex items-center gap-3">
-          <span className="text-[#34d399] text-xl">✓</span>
-          <span className="font-mono text-[0.82rem] text-[#34d399] font-bold">
-            Mensaje enviado
-          </span>
+      <div className="flex flex-col items-start gap-4 py-10">
+        <div className="w-11 h-11 rounded-full bg-[#34d399]/10 border border-[#34d399]/20 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth={2} className="w-5 h-5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
         </div>
-        <p className="font-mono text-[0.72rem] text-[#55556a]">
-          Recibimos tu mensaje. Te respondemos a la brevedad.
-        </p>
+        <div>
+          <p className="text-[1.05rem] font-semibold text-[#eaeaf0] mb-1">
+            Mensaje enviado
+          </p>
+          <p className="text-[0.9rem] text-[#8888a0] leading-relaxed">
+            Recibimos tu mensaje. Te respondemos en menos de 24 horas.
+          </p>
+        </div>
         <button
           onClick={() => setStatus("idle")}
-          className="font-mono text-[0.68rem] text-[#5b8bff] hover:underline mt-1 cursor-pointer"
+          className="text-[0.82rem] text-[#5b8bff] hover:text-[#7aa3ff] transition-colors mt-1 cursor-pointer"
         >
-          Enviar otro →
+          Enviar otro mensaje →
         </button>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
 
-      {/* Honeypot anti-spam: invisible para humanos, los bots lo completan */}
+      {/* Honeypot anti-spam */}
       <input
         {...register("website")}
         type="text"
@@ -73,38 +82,38 @@ export default function ContactForm() {
         className="absolute left-[-9999px] top-[-9999px] w-px h-px opacity-0 pointer-events-none"
       />
 
-      {/* Nombre + Email en fila */}
+      {/* Nombre + Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="flex flex-col gap-1.5">
-          <label className="font-mono text-[0.6rem] text-[#55556a] tracking-[0.1em] uppercase">
+        <div className="flex flex-col gap-2">
+          <label className="font-mono text-[0.62rem] text-[#55556a] tracking-[0.12em] uppercase">
             Nombre
           </label>
           <input
             {...register("nombre")}
             placeholder="Tu nombre"
-            className={`bg-[#0d0d11] border px-4 py-3 font-mono text-[0.78rem] text-[#eaeaf0] placeholder:text-[#2e2e3a] outline-none transition-colors rounded-[2px]
-              ${errors.nombre ? "border-[#f87171]" : "border-white/[0.07] focus:border-[#5b8bff]/50"}`}
+            autoComplete="name"
+            className={`${inputBase} ${errors.nombre ? inputError : inputIdle}`}
           />
           {errors.nombre && (
-            <span className="font-mono text-[0.6rem] text-[#f87171]">
+            <span className="text-[0.78rem] text-[#f87171] leading-none">
               {errors.nombre.message}
             </span>
           )}
         </div>
 
-        <div className="flex flex-col gap-1.5">
-          <label className="font-mono text-[0.6rem] text-[#55556a] tracking-[0.1em] uppercase">
+        <div className="flex flex-col gap-2">
+          <label className="font-mono text-[0.62rem] text-[#55556a] tracking-[0.12em] uppercase">
             Email
           </label>
           <input
             {...register("email")}
             placeholder="tu@email.com"
             type="email"
-            className={`bg-[#0d0d11] border px-4 py-3 font-mono text-[0.78rem] text-[#eaeaf0] placeholder:text-[#2e2e3a] outline-none transition-colors rounded-[2px]
-              ${errors.email ? "border-[#f87171]" : "border-white/[0.07] focus:border-[#5b8bff]/50"}`}
+            autoComplete="email"
+            className={`${inputBase} ${errors.email ? inputError : inputIdle}`}
           />
           {errors.email && (
-            <span className="font-mono text-[0.6rem] text-[#f87171]">
+            <span className="text-[0.78rem] text-[#f87171] leading-none">
               {errors.email.message}
             </span>
           )}
@@ -112,19 +121,18 @@ export default function ContactForm() {
       </div>
 
       {/* Mensaje */}
-      <div className="flex flex-col gap-1.5">
-        <label className="font-mono text-[0.6rem] text-[#55556a] tracking-[0.1em] uppercase">
+      <div className="flex flex-col gap-2">
+        <label className="font-mono text-[0.62rem] text-[#55556a] tracking-[0.12em] uppercase">
           Mensaje
         </label>
         <textarea
           {...register("mensaje")}
           placeholder="Contanos qué necesitás construir..."
           rows={5}
-          className={`bg-[#0d0d11] border px-4 py-3 font-mono text-[0.78rem] text-[#eaeaf0] placeholder:text-[#2e2e3a] outline-none transition-colors resize-none rounded-[2px]
-            ${errors.mensaje ? "border-[#f87171]" : "border-white/[0.07] focus:border-[#5b8bff]/50"}`}
+          className={`${inputBase} resize-none ${errors.mensaje ? inputError : inputIdle}`}
         />
         {errors.mensaje && (
-          <span className="font-mono text-[0.6rem] text-[#f87171]">
+          <span className="text-[0.78rem] text-[#f87171] leading-none">
             {errors.mensaje.message}
           </span>
         )}
@@ -132,24 +140,34 @@ export default function ContactForm() {
 
       {/* Error general */}
       {status === "error" && (
-        <p className="font-mono text-[0.68rem] text-[#f87171]">{errorMsg}</p>
+        <p className="text-[0.85rem] text-[#f87171] bg-[#f87171]/5 border border-[#f87171]/20 rounded-xl px-4 py-3">
+          {errorMsg}
+        </p>
       )}
 
       {/* Submit */}
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="self-start inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#5b8bff] text-white font-extrabold text-[0.75rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] hover:-translate-y-px transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
-      >
-        {status === "loading" ? (
-          <>
-            <span className="w-3 h-3 border border-white/40 border-t-white rounded-full animate-spin" />
-            Enviando...
-          </>
-        ) : (
-          "Enviar mensaje →"
-        )}
-      </button>
+      <div className="pt-1">
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#5b8bff] text-white font-bold text-[0.82rem] tracking-[0.04em] hover:bg-[#4a7aee] hover:-translate-y-px transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+        >
+          {status === "loading" ? (
+            <>
+              <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              Enviando...
+            </>
+          ) : (
+            <>
+              Enviar mensaje
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </>
+          )}
+        </button>
+      </div>
+
     </form>
   );
 }
