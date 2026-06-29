@@ -1,25 +1,43 @@
-const items = [
-  { label: "Sistemas en producción" },
-  { label: "Experiencia en software" },
-  { label: "Proyectos entregados" },
-  { label: "Disponibles para proyectos", live: true },
+"use client";
+import AnimatedCounter from "./AnimatedCounter";
+
+const stats = [
+  { prefix: "+", to: 10, suffix: "", label: "Sistemas en producción" },
+  { prefix: "",  to: 3,  suffix: " años", label: "Experiencia en software" },
+  { prefix: "",  to: 100, suffix: "%", label: "Código propio, sin templates" },
 ];
 
 export default function Stats() {
   return (
-    <div className="border-t border-b border-white/[0.055] mb-24">
-      <div className="max-w-[960px] mx-auto flex flex-wrap md:flex-nowrap">
-        {items.map((item, i) => (
-          <div
-            key={i}
-            className="flex-1 min-w-[50%] md:min-w-0 px-6 md:px-8 py-4 border-r border-white/[0.055] last:border-r-0 border-b md:border-b-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r flex items-center gap-2.5 h-12"
-          >
-            {item.live && <span className="dot-live shrink-0" />}
-            <span className="font-mono text-[0.6rem] text-[#55556a] uppercase tracking-[0.07em] leading-none whitespace-nowrap">
-              {item.label}
-            </span>
+    <div className="max-w-[1040px] mx-auto px-5 md:px-8 mb-20 md:mb-28">
+      <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/[0.06] rounded-2xl border border-white/[0.07] bg-[#0d0d11] overflow-hidden">
+
+        {stats.map((s, i) => (
+          <div key={i} className="flex flex-col items-start px-8 py-7 gap-1.5">
+            <div className="text-[2.6rem] md:text-[3rem] font-extrabold tracking-[-0.04em] leading-none text-[#eaeaf0]">
+              <AnimatedCounter
+                to={s.to}
+                prefix={s.prefix}
+                suffix={s.suffix}
+                duration={1.6}
+              />
+            </div>
+            <div className="font-mono text-[0.62rem] text-[#55556a] tracking-[0.1em] uppercase leading-none">
+              {s.label}
+            </div>
           </div>
         ))}
+
+        {/* Disponibles — sin número, con dot live */}
+        <div className="flex flex-col items-start px-8 py-7 gap-1.5 sm:hidden lg:flex">
+          <div className="flex items-center gap-2.5 text-[2.6rem] md:text-[3rem] font-extrabold tracking-[-0.04em] leading-none text-[#34d399]">
+            <span className="dot-live" style={{ width: 10, height: 10 }} />
+          </div>
+          <div className="font-mono text-[0.62rem] text-[#55556a] tracking-[0.1em] uppercase leading-none">
+            Disponibles para proyectos
+          </div>
+        </div>
+
       </div>
     </div>
   );

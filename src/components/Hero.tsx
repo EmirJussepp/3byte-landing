@@ -26,7 +26,7 @@ export default function Hero() {
                 salto/reflujo mientras la animación va tipeando */}
             <span className="relative inline-block align-top">
               <span className="invisible" aria-hidden="true">un sistema propio.</span>
-              <span className="absolute inset-0 text-[#a78bfa]">
+              <span className="absolute inset-0 bg-gradient-to-r from-[#a78bfa] via-[#7eb3ff] to-[#5b8bff] bg-clip-text text-transparent">
                 {displayed}
                 {!done && <span className="cursor-blink" />}
               </span>

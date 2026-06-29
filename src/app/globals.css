@@ -80,4 +80,15 @@ body {
 }
 @media (prefers-reduced-motion: reduce) {
   .spotlight-aurora { animation:none; }
+  .animate-marquee  { animation:none; }
+}
+
+/* Marquee infinito — velocidad calibrada para 4 logos */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+  will-change: transform;
 }
