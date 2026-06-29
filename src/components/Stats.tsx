@@ -28,15 +28,6 @@ export default function Stats() {
           </div>
         ))}
 
-        {/* Disponibles — sin número, con dot live */}
-        <div className="flex flex-col items-start px-8 py-7 gap-1.5 sm:hidden lg:flex">
-          <div className="flex items-center gap-2.5 text-[2.6rem] md:text-[3rem] font-extrabold tracking-[-0.04em] leading-none text-[#34d399]">
-            <span className="dot-live" style={{ width: 10, height: 10 }} />
-          </div>
-          <div className="font-mono text-[0.62rem] text-[#55556a] tracking-[0.1em] uppercase leading-none">
-            Disponibles para proyectos
-          </div>
-        </div>
 
       </div>
     </div>
