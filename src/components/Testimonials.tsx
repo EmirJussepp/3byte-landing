@@ -25,16 +25,6 @@ const testimonials = [
   },
 ];
 
-const QuoteIcon = () => (
-  <svg viewBox="0 0 32 24" fill="none" className="w-7 h-5 shrink-0" aria-hidden="true">
-    <path
-      d="M0 24V14.4C0 6.24 4.8 1.44 14.4 0l1.92 3.12C11.04 4.32 8.4 7.2 7.68 12H14.4V24H0ZM17.6 24V14.4C17.6 6.24 22.4 1.44 32 0l1.92 3.12C28.64 4.32 26 7.2 25.28 12H32V24H17.6Z"
-      fill="#5b8bff"
-      fillOpacity="0.35"
-    />
-  </svg>
-);
-
 export default function Testimonials() {
   return (
     <section className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-28 md:mb-36">
@@ -56,33 +46,40 @@ export default function Testimonials() {
           <FadeIn
             key={i}
             delay={i * 0.08}
-            className="rounded-2xl border border-white/[0.07] bg-[#0d0d11] p-6 md:p-7 flex flex-col h-full"
+            className="rounded-2xl border border-white/[0.07] bg-[#0d0d11] p-7 flex flex-col"
           >
-            {/* Comilla SVG real */}
-            <div className="mb-5">
-              <QuoteIcon />
+            {/* Comilla grande — caracter real con gradiente, sin SVG roto */}
+            <div
+              className="text-[3.8rem] font-bold leading-none mb-4 select-none bg-gradient-to-br from-[#a78bfa] to-[#5b8bff] bg-clip-text text-transparent"
+              aria-hidden="true"
+            >
+              &ldquo;
             </div>
 
-            {/* Quote — texto legible en font-syne */}
-            <p className="flex-1 text-[0.95rem] text-[#b8b8cc] leading-[1.8] mb-7">
+            {/* Cita */}
+            <p className="flex-1 text-[0.95rem] text-[#b8b8cc] leading-[1.82] mb-8">
               {t.quote}
             </p>
 
             {/* Firma */}
             <div className="flex items-center gap-3 pt-5 border-t border-white/[0.06]">
-              <div className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1 shrink-0">
+              <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5 shrink-0">
                 <Image
                   src={t.logo}
                   alt={t.author}
-                  width={36}
-                  height={36}
+                  width={40}
+                  height={40}
                   className="object-contain w-full h-full"
                   unoptimized
                 />
               </div>
               <div>
-                <div className="text-[0.88rem] font-semibold text-[#eaeaf0] leading-tight">{t.author}</div>
-                <div className="text-[0.75rem] text-[#55556a] mt-0.5 leading-tight">{t.role}</div>
+                <div className="text-[0.88rem] font-semibold text-[#eaeaf0] leading-tight">
+                  {t.author}
+                </div>
+                <div className="text-[0.75rem] text-[#55556a] mt-0.5 leading-tight">
+                  {t.role}
+                </div>
               </div>
             </div>
           </FadeIn>
