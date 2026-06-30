@@ -13,8 +13,8 @@ const servicios = [
   },
   {
     n: "03",
-    title: "Integraciones",
-    desc: "Conectamos tu sistema con Tienda Nube, WhatsApp, APIs de pago y cualquier servicio externo que uses.",
+    title: "Branding",
+    desc: "Identidad visual para tu sistema o producto: logotipo, paleta de colores y aplicación consistente en cada pantalla.",
   },
   {
     n: "04",
