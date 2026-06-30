@@ -31,7 +31,7 @@ export default function Proceso() {
   return (
     <section id="proceso" className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-28 md:mb-36">
       <FadeIn direction="left">
-        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-full border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
+        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-sm border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
           cómo trabajamos
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
@@ -48,11 +48,11 @@ export default function Proceso() {
           <FadeIn
             key={i}
             delay={i * 0.08}
-            className="rounded-2xl border border-white/[0.07] bg-[#0d0d11] p-6 flex flex-col"
+            className="rounded-md border border-white/[0.07] bg-[#0d0d11] p-6 flex flex-col"
           >
             {/* Número */}
             <div className="mb-5">
-              <div className="w-9 h-9 rounded-full border border-[#a78bfa]/30 bg-[#a78bfa]/[0.06] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-sm border border-[#a78bfa]/30 bg-[#a78bfa]/[0.06] flex items-center justify-center">
                 <span className="font-mono text-[0.62rem] text-[#a78bfa] font-bold tracking-wider">{p.n}</span>
               </div>
             </div>

@@ -27,7 +27,7 @@ export default function LogosStrip() {
         <div className="flex items-center animate-marquee group-hover:[animation-play-state:paused]">
           {track.map((l, i) => (
             <div key={i} className="flex items-center gap-3 mx-10 shrink-0">
-              <div className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5 shrink-0">
+              <div className="w-9 h-9 rounded-sm bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5 shrink-0">
                 <Image
                   src={l.src}
                   alt={l.name}

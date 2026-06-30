@@ -16,7 +16,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const inputBase =
-  "w-full bg-[#13131a] border text-[#eaeaf0] text-[0.92rem] placeholder:text-[#3a3a4a] outline-none transition-all duration-200 rounded-xl px-4 py-3";
+  "w-full bg-[#13131a] border text-[#eaeaf0] text-[0.92rem] placeholder:text-[#3a3a4a] outline-none transition-all duration-200 rounded-sm px-4 py-3";
 const inputIdle = "border-white/[0.08] focus:border-[#5b8bff]/50 focus:ring-2 focus:ring-[#5b8bff]/10";
 const inputError = "border-[#f87171]/60 focus:border-[#f87171] focus:ring-2 focus:ring-[#f87171]/10";
 
@@ -46,7 +46,7 @@ export default function ContactForm() {
   if (status === "ok") {
     return (
       <div className="flex flex-col items-start gap-4 py-10">
-        <div className="w-11 h-11 rounded-full bg-[#34d399]/10 border border-[#34d399]/20 flex items-center justify-center">
+        <div className="w-11 h-11 rounded-sm bg-[#34d399]/10 border border-[#34d399]/20 flex items-center justify-center">
           <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth={2} className="w-5 h-5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
@@ -140,7 +140,7 @@ export default function ContactForm() {
 
       {/* Error general */}
       {status === "error" && (
-        <p className="text-[0.85rem] text-[#f87171] bg-[#f87171]/5 border border-[#f87171]/20 rounded-xl px-4 py-3">
+        <p className="text-[0.85rem] text-[#f87171] bg-[#f87171]/5 border border-[#f87171]/20 rounded-sm px-4 py-3">
           {errorMsg}
         </p>
       )}
@@ -150,7 +150,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#5b8bff] text-white font-bold text-[0.82rem] tracking-[0.04em] hover:bg-[#4a7aee] hover:-translate-y-px transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+          className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-sm bg-[#5b8bff] text-white font-bold text-[0.82rem] tracking-[0.04em] hover:bg-[#4a7aee] hover:-translate-y-px transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
         >
           {status === "loading" ? (
             <>

@@ -55,7 +55,7 @@ export default function Nav() {
     <>
       <nav className="sticky top-0 z-50 px-3 md:px-4 pt-3 md:pt-4">
         <div
-          className={`max-w-[1000px] mx-auto rounded-2xl border backdrop-blur-xl transition-all duration-300 ${
+          className={`max-w-[1000px] mx-auto rounded-md border backdrop-blur-xl transition-all duration-300 ${
             scrolled
               ? "bg-[#0d0d11]/85 border-white/[0.09] shadow-lg shadow-black/40"
               : "bg-[#0d0d11]/55 border-white/[0.06]"
@@ -89,7 +89,7 @@ export default function Nav() {
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="font-mono text-[0.67rem] text-[#8888a0] tracking-[0.1em] uppercase font-bold px-3 py-1.5 rounded-full hover:text-[#eaeaf0] hover:bg-white/[0.05] transition-all duration-200 cursor-pointer"
+                className="font-mono text-[0.67rem] text-[#8888a0] tracking-[0.1em] uppercase font-bold px-3 py-1.5 rounded hover:text-[#eaeaf0] hover:bg-white/[0.05] transition-all duration-200 cursor-pointer"
               >
                 {item.label}
               </button>
@@ -118,7 +118,7 @@ export default function Nav() {
             {/* CTA desktop */}
             <button
               onClick={() => scrollTo("contacto")}
-              className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#5b8bff] text-white font-mono font-bold text-[0.65rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
+              className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 rounded-sm bg-[#5b8bff] text-white font-mono font-bold text-[0.65rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
             >
               Contactar
             </button>
@@ -164,7 +164,7 @@ export default function Nav() {
             </div>
             <button
               onClick={() => scrollTo("contacto")}
-              className="mt-3 w-full py-3 rounded-full bg-[#5b8bff] text-white font-mono font-bold text-[0.72rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
+              className="mt-3 w-full py-3 rounded-sm bg-[#5b8bff] text-white font-mono font-bold text-[0.72rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
             >
               Contactar
             </button>
