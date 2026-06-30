@@ -10,7 +10,7 @@ export default function Hero() {
 
   return (
     <section className="relative px-5 md:px-8 pt-20 md:pt-24 pb-20 md:pb-24 max-w-[1140px] mx-auto">
-      <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-10 items-center">
+      <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-10 items-start">
 
         {/* Columna de texto */}
         <div>
