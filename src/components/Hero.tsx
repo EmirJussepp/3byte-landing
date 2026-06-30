@@ -10,15 +10,17 @@ export default function Hero() {
 
   return (
     <section className="relative px-5 md:px-8 pt-20 md:pt-24 pb-20 md:pb-24 max-w-[1140px] mx-auto">
+
+      {/* Tagline fuera del grid — la imagen arranca a la misma altura que el h1 */}
+      <div className="font-mono text-[0.65rem] md:text-[0.68rem] text-[#5b8bff] tracking-[0.14em] uppercase mb-8 flex items-center gap-3">
+        <span className="dot-live" />
+        Desarrollo de software · San Francisco, Córdoba · Argentina
+      </div>
+
       <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-10 items-start">
 
         {/* Columna de texto */}
         <div>
-          <div className="font-mono text-[0.65rem] md:text-[0.68rem] text-[#5b8bff] tracking-[0.14em] uppercase mb-8 flex items-center gap-3">
-            <span className="dot-live" />
-            Desarrollo de software · San Francisco, Córdoba · Argentina
-          </div>
-
           <h1 className="text-[clamp(2.4rem,6vw,4.4rem)] font-extrabold leading-[1.02] tracking-[-0.045em] mb-8">
             <span className="block text-[#eaeaf0]">Tu negocio merece</span>
             <span className="relative block">
