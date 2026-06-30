@@ -31,7 +31,7 @@ export default function Nosotros() {
           quiénes somos
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
-          Un grupo chico<br />
+          Un grupo pequeño<br />
           <span className="text-[#2e2e3a]">que hace las cosas bien.</span>
         </h2>
         <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-14 md:mb-16 max-w-[520px] leading-[1.9]">
