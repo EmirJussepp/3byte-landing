@@ -9,7 +9,7 @@ const projects = [
     desc: "Gestión completa para autodetailing: ventas, compras, caja, stock, clientes, proveedores y cuenta corriente. Integración con Tienda Nube mediante webhooks bidireccionales.",
     logo: "https://elitecarshopsf.duckdns.org/assets/logoelite-W4eZvBtv.jpg",
     logoH: 36,
-    badge: { label: "En producción", dot: "bg-[#34d399]", text: "text-[#34d399]" },
+    badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
     href: null,
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     desc: "Sistema de gestión para gimnasio: socios, membresías, control de asistencia y pagos. Identidad visual y flujos propios del negocio.",
     logo: "https://aerogym.duckdns.org/logoaerogym.jpg",
     logoH: 36,
-    badge: { label: "En producción", dot: "bg-[#34d399]", text: "text-[#34d399]" },
+    badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
     href: null,
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     desc: "Sistema para asociación deportiva: socios, cuotas, movimientos de caja y reportes. La comisión directiva administra todo sin depender de terceros.",
     logo: "https://pboquensesf.duckdns.org/assets/logo_pe%C3%B1a-BetDt1YW.png",
     logoH: 40,
-    badge: { label: "En producción", dot: "bg-[#34d399]", text: "text-[#34d399]" },
+    badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
     href: null,
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     desc: "Plataforma de reservas para clubes deportivos. Turnos, confirmaciones por WhatsApp, caja del día y estadísticas. Multi-admin, activación en menos de un día.",
     logo: "https://www.sportbyte.com.ar/logosolosportbyte.png",
     logoH: 38,
-    badge: { label: "SaaS · activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
+    badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
     href: "https://www.sportbyte.com.ar",
   },
 ];
