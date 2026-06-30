@@ -10,7 +10,7 @@ const stats = [
 export default function Stats() {
   return (
     <div className="max-w-[1040px] mx-auto px-5 md:px-8 mb-20 md:mb-28">
-      <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/[0.06] rounded-md border border-white/[0.07] bg-[#0d0d11] overflow-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/[0.06] rounded-none border border-white/[0.07] bg-[#0d0d11] overflow-hidden">
 
         {stats.map((s, i) => (
           <div key={i} className="flex flex-col items-start px-8 py-7 gap-1.5">

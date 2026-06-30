@@ -30,7 +30,7 @@ const EmailIcon = () => (
 
 const socials = [
   { icon: <WhatsAppIcon />, href: "https://wa.me/543512762415", label: "WhatsApp", color: "hover:text-[#34d399]" },
-  { icon: <InstagramIcon />, href: "https://instagram.com/grupo3byte_", label: "Instagram", color: "hover:text-[#a78bfa]" },
+  { icon: <InstagramIcon />, href: "https://instagram.com/grupo3byte_", label: "Instagram", color: "hover:text-[#eaeaf0]" },
   { icon: <EmailIcon />, href: "mailto:grupo3byteapp@gmail.com", label: "Email", color: "hover:text-[#5b8bff]" },
 ];
 
@@ -55,7 +55,7 @@ export default function Nav() {
     <>
       <nav className="sticky top-0 z-50 px-3 md:px-4 pt-3 md:pt-4">
         <div
-          className={`max-w-[1000px] mx-auto rounded-md border backdrop-blur-xl transition-all duration-300 ${
+          className={`max-w-[1000px] mx-auto rounded-none border backdrop-blur-xl transition-all duration-300 ${
             scrolled
               ? "bg-[#0d0d11]/85 border-white/[0.09] shadow-lg shadow-black/40"
               : "bg-[#0d0d11]/55 border-white/[0.06]"
@@ -68,7 +68,7 @@ export default function Nav() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-2.5 group cursor-pointer"
           >
-            <div className="w-7 h-7 rounded-[4px] overflow-hidden border border-white/[0.08] group-hover:border-white/[0.15] transition-colors">
+            <div className="w-7 h-7 rounded-none overflow-hidden border border-white/[0.08] group-hover:border-white/[0.15] transition-colors">
               <Image
                 src="https://pboquensesf.duckdns.org/assets/logochico-DCu-UpDX.png"
                 alt="3Byte"
@@ -78,7 +78,7 @@ export default function Nav() {
                 unoptimized
               />
             </div>
-            <span className="font-mono text-[0.92rem] font-bold tracking-tight text-[#a78bfa] group-hover:text-[#c4a8ff] transition-colors">
+            <span className="font-mono text-[0.92rem] font-bold tracking-tight text-[#eaeaf0] group-hover:text-white transition-colors">
               3byte
             </span>
           </button>
@@ -118,7 +118,7 @@ export default function Nav() {
             {/* CTA desktop */}
             <button
               onClick={() => scrollTo("contacto")}
-              className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 rounded-sm bg-[#5b8bff] text-white font-mono font-bold text-[0.65rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
+              className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 rounded-none bg-[#5b8bff] text-white font-mono font-bold text-[0.65rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
             >
               Contactar
             </button>
@@ -164,7 +164,7 @@ export default function Nav() {
             </div>
             <button
               onClick={() => scrollTo("contacto")}
-              className="mt-3 w-full py-3 rounded-sm bg-[#5b8bff] text-white font-mono font-bold text-[0.72rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
+              className="mt-3 w-full py-3 rounded-none bg-[#5b8bff] text-white font-mono font-bold text-[0.72rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
             >
               Contactar
             </button>

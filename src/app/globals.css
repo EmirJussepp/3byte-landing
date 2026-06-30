@@ -15,7 +15,7 @@
   --muted: #55556a;
   --muted2: #8888a0;
   --accent: #5b8bff;
-  --accent2: #a78bfa;
+  --accent2: #5b8bff;
   --green: #34d399;
   --amber: #fbbf24;
 }
@@ -69,8 +69,8 @@ body {
   width:120vw; height:62vh;
   transform:translateX(-50%);
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(91,139,255,0.10), transparent 60%),
-    radial-gradient(ellipse at 32% 5%, rgba(167,139,250,0.09), transparent 55%);
+    radial-gradient(ellipse at 50% 0%, rgba(91,139,255,0.05), transparent 60%),
+    radial-gradient(ellipse at 32% 5%, rgba(91,139,255,0.04), transparent 55%);
   filter:blur(52px);
   animation:aurora-shift 16s ease-in-out infinite alternate;
 }

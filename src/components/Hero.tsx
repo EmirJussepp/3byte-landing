@@ -20,13 +20,10 @@ export default function Hero() {
           </div>
 
           <h1 className="text-[clamp(2.4rem,6vw,4.4rem)] font-extrabold leading-[1.02] tracking-[-0.045em] mb-8">
-            <span className="text-[#eaeaf0]">Tu negocio merece</span>
-            <br />
-            {/* La copia invisible reserva el espacio del texto final → no hay
-                salto/reflujo mientras la animación va tipeando */}
-            <span className="relative inline-block align-top">
-              <span className="invisible" aria-hidden="true">un sistema propio.</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#a78bfa] via-[#7eb3ff] to-[#5b8bff] bg-clip-text text-transparent">
+            <span className="block text-[#eaeaf0]">Tu negocio merece</span>
+            <span className="relative block">
+              <span className="invisible block" aria-hidden="true">un sistema propio.</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#c8daf8] to-[#5b8bff] bg-clip-text text-transparent">
                 {displayed}
                 {!done && <span className="cursor-blink" />}
               </span>
@@ -34,7 +31,7 @@ export default function Hero() {
           </h1>
 
           <div className="flex gap-5 items-start mb-10 max-w-[520px]">
-            <div className="w-px bg-[#a78bfa]/40 self-stretch mt-1 shrink-0" />
+            <div className="w-px bg-white/[0.10] self-stretch mt-1 shrink-0" />
             <p className="font-mono text-[0.78rem] md:text-[0.82rem] text-[#8888a0] leading-[1.85]">
               Desarrollamos software a medida para PyMEs y negocios de servicios argentinos.
               Código propio, comunicación directa y sistemas que realmente se usan.
@@ -44,13 +41,13 @@ export default function Hero() {
           <div className="flex gap-3 flex-wrap">
             <button
               onClick={() => scrollTo("contacto")}
-              className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-sm bg-[#5b8bff] text-white font-extrabold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] hover:-translate-y-px transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-none bg-[#5b8bff] text-white font-extrabold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] hover:-translate-y-px transition-all cursor-pointer"
             >
               Contanos tu proyecto →
             </button>
             <button
               onClick={() => scrollTo("proyectos")}
-              className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-sm bg-transparent text-[#55556a] border border-white/[0.11] font-bold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:text-[#eaeaf0] hover:border-white/25 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-none bg-transparent text-[#55556a] border border-white/[0.11] font-bold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:text-[#eaeaf0] hover:border-white/25 transition-all cursor-pointer"
             >
               Ver proyectos reales
             </button>

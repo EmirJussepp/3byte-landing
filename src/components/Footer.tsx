@@ -14,7 +14,7 @@ export default function Footer() {
             unoptimized
           />
           <span className="font-mono text-[0.75rem] text-[#55556a]">
-            <span className="text-[#a78bfa]">3byte</span> — software que funciona
+            3byte — software que funciona
           </span>
         </div>
         <div className="font-mono text-[0.62rem] text-[#55556a]">

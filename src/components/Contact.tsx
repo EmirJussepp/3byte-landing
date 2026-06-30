@@ -13,7 +13,7 @@ export default function Contact() {
     <section id="contacto" className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-24 md:mb-32">
 
       <FadeIn direction="left">
-        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-sm border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
+        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-sm border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
           contacto
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
@@ -35,7 +35,7 @@ export default function Contact() {
             <ul className="flex flex-col gap-4">
               {trabajamosConItems.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[0.95rem] text-[#8888a0] leading-[1.65]">
-                  <span className="text-[#a78bfa] shrink-0 mt-[3px] text-sm">→</span>
+                  <span className="text-[#5b8bff] shrink-0 mt-[3px] text-sm">→</span>
                   {item}
                 </li>
               ))}
@@ -55,7 +55,7 @@ export default function Contact() {
 
         {/* Columna derecha — formulario */}
         <FadeIn delay={0.1}>
-          <div className="rounded-md border border-white/[0.07] bg-[#0d0d11] p-6 md:p-8">
+          <div className="rounded-none border border-white/[0.07] bg-[#0d0d11] p-6 md:p-8">
             <ContactForm />
           </div>
         </FadeIn>

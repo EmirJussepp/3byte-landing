@@ -8,7 +8,7 @@ export default function HeroVisual() {
       />
 
       {/* Ventana tipo editor */}
-      <div className="relative rounded-sm border border-white/[0.09] bg-[#0d0d11]/90 backdrop-blur-xl overflow-hidden shadow-2xl shadow-black/40">
+      <div className="relative rounded-none border border-white/[0.09] bg-[#0d0d11]/90 backdrop-blur-xl overflow-hidden shadow-2xl shadow-black/40">
         {/* Barra de la ventana */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/[0.06]">
           <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
@@ -37,7 +37,7 @@ export default function HeroVisual() {
       </div>
 
       {/* Tarjeta flotante de "stat" */}
-      <div className="absolute -bottom-5 -right-3 sm:-right-5 rounded-sm border border-white/[0.09] bg-[#13131a]/95 backdrop-blur-xl px-4 py-3 shadow-xl shadow-black/40">
+      <div className="absolute -bottom-5 -right-3 sm:-right-5 rounded-none border border-white/[0.09] bg-[#13131a]/95 backdrop-blur-xl px-4 py-3 shadow-xl shadow-black/40">
         <div className="font-mono text-[0.55rem] text-[#55556a] tracking-[0.1em] uppercase mb-0.5">
           Sistemas en uso
         </div>

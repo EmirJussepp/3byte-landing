@@ -65,7 +65,7 @@ export default function Projects() {
     <section id="proyectos" className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-28 md:mb-36">
 
       <FadeIn direction="left">
-        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-sm border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
+        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
           proyectos
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
@@ -79,7 +79,7 @@ export default function Projects() {
       <div className="flex flex-col gap-5 md:gap-6">
         {projects.map((p, i) => (
           <FadeIn key={i} delay={i * 0.07}>
-            <div className="group rounded-md border border-white/[0.07] bg-[#0d0d11] hover:border-white/[0.14] transition-colors duration-300 p-5 md:p-7">
+            <div className="group rounded-none border border-white/[0.07] bg-[#0d0d11] hover:border-white/[0.14] transition-colors duration-300 p-5 md:p-7">
               <div className="grid lg:grid-cols-2 gap-6 lg:gap-9 items-center">
 
                 {/* Mockup tipo navegador con el screenshot real */}
@@ -89,7 +89,7 @@ export default function Projects() {
                       aria-hidden
                       className="absolute -inset-4 bg-[#5b8bff]/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                     />
-                    <div className="relative rounded-sm border border-white/[0.09] overflow-hidden shadow-xl shadow-black/40">
+                    <div className="relative rounded-none border border-white/[0.09] overflow-hidden shadow-xl shadow-black/40">
                       <div className="flex items-center gap-1.5 px-3 py-2 border-b border-white/[0.06] bg-white/[0.02]">
                         <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
                         <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
@@ -111,13 +111,13 @@ export default function Projects() {
 
                 {/* Info */}
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                  <div className={`inline-flex items-center gap-1.5 font-mono text-[0.58rem] font-bold mb-4 px-2.5 py-1 rounded-sm border border-white/[0.08] bg-white/[0.03] ${p.badge.text}`}>
+                  <div className={`inline-flex items-center gap-1.5 font-mono text-[0.58rem] font-bold mb-4 px-2.5 py-1 rounded-none border border-white/[0.08] bg-white/[0.03] ${p.badge.text}`}>
                     <span className={`w-1.5 h-1.5 rounded-full ${p.badge.dot}`} />
                     {p.badge.label}
                   </div>
 
                   <div className="flex items-center gap-3 mb-3.5">
-                    <div className="shrink-0 w-11 h-11 rounded-sm bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5">
+                    <div className="shrink-0 w-11 h-11 rounded-none bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5">
                       <Image
                         src={p.logo}
                         alt={p.name}

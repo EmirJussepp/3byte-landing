@@ -29,7 +29,7 @@ export default function Testimonials() {
   return (
     <section className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-28 md:mb-36">
       <FadeIn direction="left">
-        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#a78bfa] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-sm border border-[#a78bfa]/25 bg-[#a78bfa]/[0.06]">
+        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
           clientes
         </div>
         <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
@@ -46,11 +46,11 @@ export default function Testimonials() {
           <FadeIn
             key={i}
             delay={i * 0.08}
-            className="rounded-md border border-white/[0.07] bg-[#0d0d11] p-7 flex flex-col"
+            className="rounded-none border border-white/[0.07] bg-[#0d0d11] p-7 flex flex-col"
           >
             {/* Comilla grande — caracter real con gradiente, sin SVG roto */}
             <div
-              className="text-[3.8rem] font-bold leading-none mb-4 select-none bg-gradient-to-br from-[#a78bfa] to-[#5b8bff] bg-clip-text text-transparent"
+              className="text-[3.8rem] font-bold leading-none mb-4 select-none bg-gradient-to-br from-[#5b8bff] to-[#5b8bff] bg-clip-text text-transparent"
               aria-hidden="true"
             >
               &ldquo;
@@ -63,7 +63,7 @@ export default function Testimonials() {
 
             {/* Firma */}
             <div className="flex items-center gap-3 pt-5 border-t border-white/[0.06]">
-              <div className="w-10 h-10 rounded-sm bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5 shrink-0">
+              <div className="w-10 h-10 rounded-none bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5 shrink-0">
                 <Image
                   src={t.logo}
                   alt={t.author}
