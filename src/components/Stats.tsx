@@ -4,7 +4,7 @@ import AnimatedCounter from "./AnimatedCounter";
 const stats = [
   { prefix: "+", to: 10, suffix: "", label: "Sistemas en producción" },
   { prefix: "",  to: 3,  suffix: " años", label: "Experiencia en software" },
-  { prefix: "",  to: 24,  suffix: "h", label: "Tiempo de respuesta" },
+  { prefix: "",  to: 24,  suffix: " hs", label: "Soporte" },
 ];
 
 export default function Stats() {
