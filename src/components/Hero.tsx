@@ -13,7 +13,6 @@ export default function Hero() {
 
       {/* Tagline fuera del grid — la imagen arranca a la misma altura que el h1 */}
       <div className="font-mono text-[0.65rem] md:text-[0.68rem] text-[#5b8bff] tracking-[0.14em] uppercase mb-8 flex items-center gap-3">
-        <span className="dot-live" />
         Desarrollo de software · San Francisco, Córdoba · Argentina
       </div>
 

@@ -46,7 +46,6 @@ export default function Contact() {
                 Tiempo de respuesta
               </p>
               <div className="flex items-center gap-2.5">
-                <span className="dot-live shrink-0" />
                 <span className="text-[0.9rem] text-[#eaeaf0] font-medium">Menos de 24 horas</span>
               </div>
             </div>

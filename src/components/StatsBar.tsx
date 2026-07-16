@@ -15,10 +15,7 @@ export default function StatsBar() {
         >
           <div className="font-mono font-bold text-[1.6rem] text-[#eaeaf0] leading-none mb-1.5">
             {s.live ? (
-              <span className="flex items-center gap-2">
-                <span className="dot-live" />
-                <span className="text-[1rem] text-[#34d399]">ON</span>
-              </span>
+              <span className="text-[1rem] text-[#eaeaf0]">ON</span>
             ) : (
               <span>
                 {s.n}
