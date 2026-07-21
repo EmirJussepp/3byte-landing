@@ -21,6 +21,11 @@ const servicios = [
     title: "Desarrollo web",
     desc: "Sitios y aplicaciones web rápidos, responsivos y optimizados para buscadores.",
   },
+  {
+    n: "05",
+    title: "Servicio técnico de PCs",
+    desc: "Reparación, diagnóstico y mantenimiento completo: limpieza física, testeo de componentes y optimización de rendimiento.",
+  },
 ];
 
 export default function Servicios() {
@@ -37,7 +42,7 @@ export default function Servicios() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.055] border border-white/[0.055]">
         {servicios.map((s, i) => (
-          <FadeIn key={i} delay={i * 0.07} className="bg-[#0d0d11] p-7 flex gap-5">
+          <FadeIn key={i} delay={i * 0.07} className={`bg-[#0d0d11] p-7 flex gap-5${i === servicios.length - 1 && servicios.length % 2 !== 0 ? " md:col-span-2" : ""}`}>
             <span className="font-mono text-[0.6rem] text-[#2e2e3a] mt-1 shrink-0 w-6">{s.n}</span>
             <div>
               <div className="text-[0.9rem] font-bold text-[#eaeaf0] mb-2">{s.title}</div>
