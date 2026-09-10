@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="w-px bg-white/[0.10] self-stretch mt-1 shrink-0" />
             <p className="font-mono text-[0.78rem] md:text-[0.82rem] text-[#8888a0] leading-[1.85]">
               Desarrollamos software a medida para PyMEs y negocios de servicios argentinos.
-              Código propio, comunicación directa y sistemas que realmente se usan.
+              Comunicación directa y sistemas que realmente se usan.
             </p>
           </div>
 
