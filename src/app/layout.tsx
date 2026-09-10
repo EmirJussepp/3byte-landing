@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "3Byte — Software a medida para PyMEs argentinas",
+  title: "Grupo3byte | Software a medida para PyMEs argentinas",
   description:
     "Construimos sistemas de gestión, productos SaaS e integraciones reales para negocios argentinos. Sin agencias, sin plantillas. San Francisco, Córdoba.",
   keywords: ["software a medida", "sistemas de gestión", "desarrollo web argentina", "SaaS córdoba", "software PyME"],
