@@ -17,7 +17,7 @@ const projects = [
     cat: "Sistema a medida",
     name: "Defyne Center",
     desc: "App de rutinas para gimnasio con modo TV en vivo: la profesora arma la clase desde el celular y se reproduce en la Smart TV con cronómetro automático.",
-    logo: "https://gymdefyne.vercel.app/icon.jpeg",
+    logo: "/defyne-logo.jpeg",
     logoH: 36,
     badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
     href: null,

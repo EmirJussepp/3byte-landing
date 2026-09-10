@@ -11,10 +11,10 @@ const testimonials = [
   },
   {
     quote:
-      "La profe arma la rutina desde el celular y directamente se ve en la TV durante la clase, con el cronómetro corriendo solo. Le sacamos un montón de tiempo a la coordinación.",
+      "La profe arma la rutina desde el celular y se ve directo en la TV durante la clase, con el cronómetro corriendo solo. Nos ahorra mucho tiempo.",
     author: "Defyne Center",
     role: "Gimnasio · San Francisco, Córdoba",
-    logo: "https://gymdefyne.vercel.app/icon.jpeg",
+    logo: "/defyne-logo.jpeg",
   },
   {
     quote:
