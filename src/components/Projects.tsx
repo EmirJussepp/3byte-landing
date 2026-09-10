@@ -93,8 +93,7 @@ export default function Projects() {
 
             {/* Footer: badge + link */}
             <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
-              <div className={`inline-flex items-center gap-1.5 font-mono text-[0.56rem] font-bold px-2 py-1 border border-white/[0.08] bg-white/[0.03] ${p.badge.text}`}>
-                <span className={`w-1.5 h-1.5 rounded-full ${p.badge.dot}`} />
+              <div className={`inline-flex items-center font-mono text-[0.56rem] font-bold px-2 py-1 border border-white/[0.08] bg-white/[0.03] ${p.badge.text}`}>
                 {p.badge.label}
               </div>
               {p.href && (
