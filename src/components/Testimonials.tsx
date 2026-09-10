@@ -11,10 +11,10 @@ const testimonials = [
   },
   {
     quote:
-      "Nos ayudó a tener todo el tema de socios y pagos mucho más organizado. Hoy sabemos el estado de cada socio al instante y eso nos simplifica bastante la operación diaria.",
-    author: "Aero Gym",
+      "La profe arma la rutina desde el celular y directamente se ve en la TV durante la clase, con el cronómetro corriendo solo. Le sacamos un montón de tiempo a la coordinación.",
+    author: "Defyne Center",
     role: "Gimnasio · San Francisco, Córdoba",
-    logo: "https://aerogym.duckdns.org/logoaerogym.jpg",
+    logo: "https://gymdefyne.vercel.app/icon.jpeg",
   },
   {
     quote:
