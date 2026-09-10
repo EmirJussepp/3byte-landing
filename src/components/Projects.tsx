@@ -15,9 +15,9 @@ const projects = [
   {
     num: "02",
     cat: "Sistema a medida",
-    name: "Aero Gym",
-    desc: "Sistema de gestión para gimnasio: socios, membresías, control de asistencia y pagos. Identidad visual y flujos propios del negocio.",
-    logo: "https://aerogym.duckdns.org/logoaerogym.jpg",
+    name: "Defyne Center",
+    desc: "App de rutinas para gimnasio con modo TV en vivo: la profesora arma la clase desde el celular y se reproduce en la Smart TV con cronómetro automático.",
+    logo: "https://gymdefyne.vercel.app/icon.jpeg",
     logoH: 36,
     badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
     href: null,
