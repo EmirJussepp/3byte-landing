@@ -1,18 +1,12 @@
 const items = [
-  "Next.js",
-  "Kotlin",
-  "Ktor",
-  "PostgreSQL",
-  "React",
-  "TypeScript",
-  "Tailwind CSS",
-  "Vue.js",
-  "Prisma",
-  "MySQL",
-  "Neon",
-  "WhatsApp API",
-  "Vercel",
-  "PM2",
+  "Hablás directo con quien escribe el código",
+  "De San Francisco, Córdoba",
+  "No hacemos mockups — hacemos software",
+  "Sistemas en uso real, no en portfolio",
+  "Del primer llamado al primer commit",
+  "Un equipo pequeño que entiende tu negocio",
+  "Sin agencias ni intermediarios",
+  "Respondemos en menos de 24 hs",
 ];
 
 export default function TechMarquee() {
