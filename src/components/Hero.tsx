@@ -1,6 +1,7 @@
 "use client";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import HeroVisual from "./HeroVisual";
+import MagneticButton from "./MagneticButton";
 
 export default function Hero() {
   const { displayed, done } = useTypewriter("un sistema propio.", 60, 700);
@@ -35,18 +36,19 @@ export default function Hero() {
           </div>
 
           <div className="flex gap-3 flex-wrap">
-            <button
+            <MagneticButton
               onClick={() => scrollTo("contacto")}
-              className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-none bg-[#5b8bff] text-white font-extrabold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] hover:-translate-y-px transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-none bg-[#5b8bff] text-white font-extrabold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:bg-[#4a7aee] transition-colors cursor-pointer"
             >
               Contanos tu proyecto →
-            </button>
-            <button
+            </MagneticButton>
+            <MagneticButton
               onClick={() => scrollTo("proyectos")}
+              strength={0.2}
               className="inline-flex items-center gap-2 px-6 md:px-7 py-3.5 rounded-none bg-transparent text-[#55556a] border border-white/[0.11] font-bold text-[0.72rem] md:text-[0.75rem] tracking-[0.08em] uppercase hover:text-[#eaeaf0] hover:border-white/25 transition-all cursor-pointer"
             >
               Ver proyectos reales
-            </button>
+            </MagneticButton>
           </div>
         </div>
 
