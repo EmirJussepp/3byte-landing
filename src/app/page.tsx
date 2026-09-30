@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Servicios from "@/components/Servicios";
+import TechMarquee from "@/components/TechMarquee";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import Proceso from "@/components/Proceso";
@@ -18,6 +19,7 @@ export default function Home() {
       <Spotlight />
       <Nav />
       <Hero />
+      <TechMarquee />
       <Servicios />
       <Projects />
       <Testimonials />
