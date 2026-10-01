@@ -55,51 +55,49 @@ export default function Nav() {
           scrolled ? "bg-[#08080b]/80 backdrop-blur-xl border-b border-white/[0.06]" : ""
         }`}
       >
-        <div className="max-w-[1040px] mx-auto px-6 md:px-10 py-5 md:py-7 flex items-center justify-between">
+        <div className="w-full px-6 md:px-10 py-5 md:py-7 flex items-center justify-between">
 
-          {/* Logo */}
+          {/* Logo — solo ícono */}
           <button
             onClick={() => scrollTo("top")}
-            className="flex items-center gap-3.5 group cursor-pointer"
+            className="group cursor-pointer"
+            aria-label="Inicio"
           >
-            <div className="w-11 h-11 overflow-hidden border border-white/[0.1] group-hover:border-white/[0.25] transition-colors shrink-0">
+            <div className="w-12 h-12 overflow-hidden border border-white/[0.12] group-hover:border-white/[0.3] transition-colors">
               <Image
                 src="https://pboquensesf.duckdns.org/assets/logochico-DCu-UpDX.png"
                 alt="3Byte"
-                width={44}
-                height={44}
+                width={48}
+                height={48}
                 className="object-contain w-full h-full"
                 unoptimized
               />
             </div>
-            <span className="font-mono text-[1.15rem] font-bold tracking-tight text-[#eaeaf0] group-hover:text-white transition-colors">
-              grupo3byte
-            </span>
           </button>
 
           {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
-            className="relative z-[60] flex flex-col justify-center gap-[7px] p-3 cursor-pointer"
+            className="relative z-[60] flex flex-col justify-center gap-[8px] p-3 cursor-pointer"
           >
             <motion.span
-              animate={open ? { rotate: 45, y: 10 } : { rotate: 0, y: 0 }}
+              animate={open ? { rotate: 45, y: 11 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.28, ease: "easeInOut" }}
-              className="block bg-[#eaeaf0] origin-center"
-              style={{ width: 32, height: 2.5 }}
+              className="block bg-white origin-center"
+              style={{ width: 36, height: 2.5 }}
             />
             <motion.span
-              animate={open ? { opacity: 0, x: 10 } : { opacity: 1, x: 0 }}
+              animate={open ? { opacity: 0, x: 12 } : { opacity: 1, x: 0 }}
               transition={{ duration: 0.2 }}
-              className="block bg-[#eaeaf0]"
-              style={{ width: 22, height: 2.5 }}
+              className="block bg-white"
+              style={{ width: 24, height: 2.5 }}
             />
             <motion.span
-              animate={open ? { rotate: -45, y: -10 } : { rotate: 0, y: 0 }}
+              animate={open ? { rotate: -45, y: -11 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.28, ease: "easeInOut" }}
-              className="block bg-[#eaeaf0] origin-center"
-              style={{ width: 32, height: 2.5 }}
+              className="block bg-white origin-center"
+              style={{ width: 36, height: 2.5 }}
             />
           </button>
         </div>

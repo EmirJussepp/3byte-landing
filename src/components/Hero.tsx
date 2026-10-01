@@ -79,56 +79,64 @@ export default function Hero() {
         </AnimatePresence>
       </div>
 
-      {/* Contenido principal */}
-      <div className="relative z-10 px-5 md:px-10 pb-16 md:pb-24 max-w-[1100px] mx-auto w-full">
+      {/* Contenido principal — centrado */}
+      <div className="relative z-10 flex flex-col items-center text-center px-5 md:px-10 pb-20 md:pb-28 max-w-[900px] mx-auto w-full">
 
+        {/* Marca centrada */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={loaded ? { opacity: 1 } : {}}
-          transition={{ duration: 0.4 }}
+          initial={{ opacity: 0, y: -12 }}
+          animate={loaded ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.05, ease: "easeOut" }}
+          className="flex items-center gap-3 mb-8 md:mb-10"
         >
-          <h1 className="text-[clamp(3rem,8vw,7.5rem)] font-extrabold tracking-[-0.05em] leading-[0.92] mb-6 md:mb-8">
-            {["Tu", "negocio", "merece"].map((w, i) => (
-              <motion.span
-                key={w}
-                initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
-                animate={loaded ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-                transition={{ duration: 0.7, delay: 0.15 + i * 0.1, ease }}
-                className="inline-block mr-[0.2em] text-white"
-              >
-                {w}
-              </motion.span>
-            ))}
-            <br />
-            {["un", "sistema", "propio."].map((w, i) => (
-              <motion.span
-                key={w}
-                initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
-                animate={loaded ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-                transition={{ duration: 0.7, delay: 0.45 + i * 0.1, ease }}
-                className="inline-block mr-[0.2em] bg-gradient-to-r from-[#c8daf8] to-[#5b8bff] bg-clip-text text-transparent"
-              >
-                {w}
-              </motion.span>
-            ))}
-          </h1>
+          <span className="block w-8 h-[1px] bg-white/20" />
+          <span className="font-mono text-[0.7rem] text-white/40 tracking-[0.22em] uppercase">
+            grupo3byte
+          </span>
+          <span className="block w-8 h-[1px] bg-white/20" />
         </motion.div>
+
+        <h1 className="text-[clamp(3rem,9vw,8rem)] font-extrabold tracking-[-0.05em] leading-[0.92] mb-7 md:mb-9">
+          {["Tu", "negocio", "merece"].map((w, i) => (
+            <motion.span
+              key={w}
+              initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
+              animate={loaded ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+              transition={{ duration: 0.7, delay: 0.15 + i * 0.1, ease }}
+              className="inline-block mr-[0.2em] text-white"
+            >
+              {w}
+            </motion.span>
+          ))}
+          <br />
+          {["un", "sistema", "propio."].map((w, i) => (
+            <motion.span
+              key={w}
+              initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
+              animate={loaded ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+              transition={{ duration: 0.7, delay: 0.45 + i * 0.1, ease }}
+              className="inline-block mr-[0.2em] bg-gradient-to-r from-[#c8daf8] to-[#5b8bff] bg-clip-text text-transparent"
+            >
+              {w}
+            </motion.span>
+          ))}
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={loaded ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.85, ease: "easeOut" }}
-          className="font-mono text-[0.8rem] md:text-[0.85rem] text-white/50 max-w-[480px] leading-[1.9] mb-8"
+          className="font-mono text-[0.8rem] md:text-[0.88rem] text-white/40 max-w-[460px] leading-[1.9] mb-9"
         >
-          Desarrollamos software a medida para PyMEs y negocios de servicios argentinos.
-          Comunicación directa y sistemas que realmente se usan.
+          Software a medida para PyMEs argentinas.
+          Comunicación directa, sistemas que realmente se usan.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={loaded ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
-          className="flex gap-3 flex-wrap"
+          className="flex gap-3 flex-wrap justify-center"
         >
           <MagneticButton
             onClick={() => scrollTo("contacto")}
