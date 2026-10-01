@@ -1,5 +1,8 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import FadeIn from "./FadeIn";
+import ProjectModal from "./ProjectModal";
 
 const projects = [
   {
@@ -9,8 +12,9 @@ const projects = [
     desc: "Gestión completa para autodetailing: ventas, compras, caja, stock, clientes, proveedores y cuenta corriente. Integración con Tienda Nube mediante webhooks bidireccionales.",
     logo: "https://elitecarshopsf.duckdns.org/assets/logoelite-W4eZvBtv.jpg",
     logoH: 36,
-    badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
+    badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
+    images: [],
   },
   {
     num: "02",
@@ -19,8 +23,9 @@ const projects = [
     desc: "App de rutinas para gimnasio con modo TV en vivo: la profesora arma la clase desde el celular y se reproduce en la Smart TV con cronómetro automático.",
     logo: "/defyne-logo.jpeg",
     logoH: 36,
-    badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
+    badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
+    images: [],
   },
   {
     num: "03",
@@ -29,8 +34,9 @@ const projects = [
     desc: "Sistema para asociación deportiva: socios, cuotas, movimientos de caja y reportes. La comisión directiva administra todo sin depender de terceros.",
     logo: "https://pboquensesf.duckdns.org/assets/logo_pe%C3%B1a-BetDt1YW.png",
     logoH: 40,
-    badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
+    badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
+    images: ["/projects/pena-flyer-1.jpg", "/projects/pena-flyer-2.jpg"],
   },
   {
     num: "04",
@@ -39,78 +45,103 @@ const projects = [
     desc: "Plataforma de reservas para clubes deportivos. Turnos, confirmaciones por WhatsApp, caja del día y estadísticas. Multi-admin, activación en menos de un día.",
     logo: "https://www.sportbyte.com.ar/logosolosportbyte.png",
     logoH: 38,
-    badge: { label: "Activo", dot: "bg-[#5b8bff]", text: "text-[#5b8bff]" },
+    badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: "https://www.sportbyte.com.ar",
+    images: [],
   },
 ];
 
 export default function Projects() {
+  const [modal, setModal] = useState<{ images: string[]; title: string } | null>(null);
+
+  const handleClick = (p: typeof projects[0]) => {
+    if (p.images.length > 0) setModal({ images: p.images, title: p.name });
+  };
+
   return (
-    <section id="proyectos" className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-28 md:mb-36">
+    <>
+      <section id="proyectos" className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-28 md:mb-36">
 
-      <FadeIn direction="left">
-        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
-          proyectos
+        <FadeIn direction="left">
+          <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
+            proyectos
+          </div>
+          <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
+            Proyectos destacados
+          </h2>
+          <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-14 md:mb-16 max-w-[520px] leading-[1.9]">
+            Algunos de los sistemas que construimos y hoy están en uso real.
+          </p>
+        </FadeIn>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.055] border border-white/[0.055]">
+          {projects.map((p, i) => {
+            const clickable = p.images.length > 0;
+            return (
+              <FadeIn key={i} delay={i * 0.07} className="bg-[#0d0d11] p-7 flex flex-col gap-5">
+                <div className="flex items-center gap-3">
+                  <div className="shrink-0 w-10 h-10 bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5">
+                    <Image
+                      src={p.logo}
+                      alt={p.name}
+                      width={40}
+                      height={p.logoH}
+                      className="object-contain w-full h-full"
+                      unoptimized
+                    />
+                  </div>
+                  <div>
+                    <div className="font-mono text-[0.55rem] text-[#55556a] tracking-[0.1em] uppercase mb-0.5">
+                      {p.num} · {p.cat}
+                    </div>
+                    <div className="text-[1.05rem] font-extrabold tracking-[-0.02em] text-[#eaeaf0] leading-none">
+                      {p.name}
+                    </div>
+                  </div>
+                </div>
+
+                <p className="flex-1 font-mono text-[0.76rem] text-[#8888a0] leading-[1.85]">
+                  {p.desc}
+                </p>
+
+                <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+                  <div className={`inline-flex items-center font-mono text-[0.56rem] font-bold px-2 py-1 border border-white/[0.08] bg-white/[0.03] ${p.badge.text}`}>
+                    {p.badge.label}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    {clickable && (
+                      <button
+                        onClick={() => handleClick(p)}
+                        className="font-mono text-[0.62rem] font-bold text-[#55556a] hover:text-[#eaeaf0] transition-colors cursor-pointer"
+                      >
+                        Ver flyers ↗
+                      </button>
+                    )}
+                    {p.href && (
+                      <a
+                        href={p.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-[0.62rem] font-bold text-[#5b8bff] hover:text-[#7aa3ff] transition-colors"
+                      >
+                        Ver sitio ↗
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </FadeIn>
+            );
+          })}
         </div>
-        <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
-          Proyectos destacados
-        </h2>
-        <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-14 md:mb-16 max-w-[520px] leading-[1.9]">
-          Algunos de los sistemas que construimos y hoy están en uso real.
-        </p>
-      </FadeIn>
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.055] border border-white/[0.055]">
-        {projects.map((p, i) => (
-          <FadeIn key={i} delay={i * 0.07} className="bg-[#0d0d11] p-7 flex flex-col gap-5">
-
-            {/* Header: logo + nombre + categoría */}
-            <div className="flex items-center gap-3">
-              <div className="shrink-0 w-10 h-10 bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5">
-                <Image
-                  src={p.logo}
-                  alt={p.name}
-                  width={40}
-                  height={p.logoH}
-                  className="object-contain w-full h-full"
-                  unoptimized
-                />
-              </div>
-              <div>
-                <div className="font-mono text-[0.55rem] text-[#55556a] tracking-[0.1em] uppercase mb-0.5">
-                  {p.num} · {p.cat}
-                </div>
-                <div className="text-[1.05rem] font-extrabold tracking-[-0.02em] text-[#eaeaf0] leading-none">
-                  {p.name}
-                </div>
-              </div>
-            </div>
-
-            {/* Descripción */}
-            <p className="flex-1 font-mono text-[0.76rem] text-[#8888a0] leading-[1.85]">
-              {p.desc}
-            </p>
-
-            {/* Footer: badge + link */}
-            <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
-              <div className={`inline-flex items-center font-mono text-[0.56rem] font-bold px-2 py-1 border border-white/[0.08] bg-white/[0.03] ${p.badge.text}`}>
-                {p.badge.label}
-              </div>
-              {p.href && (
-                <a
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-[0.62rem] font-bold text-[#5b8bff] hover:text-[#7aa3ff] transition-colors"
-                >
-                  Ver sitio ↗
-                </a>
-              )}
-            </div>
-
-          </FadeIn>
-        ))}
-      </div>
-    </section>
+      {modal && (
+        <ProjectModal
+          images={modal.images}
+          title={modal.title}
+          onClose={() => setModal(null)}
+        />
+      )}
+    </>
   );
 }
