@@ -54,9 +54,9 @@ export default function Hero() {
         </motion.div>
       ))}
 
-      {/* Overlays: oscuro arriba (nav), fuerte abajo (texto) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#08080b]/70 via-[#08080b]/30 to-[#08080b]/90 pointer-events-none" />
-      <div className="absolute inset-0 bg-[#08080b]/20 pointer-events-none" />
+      {/* Overlay muy oscuro — imagen como textura sutil de fondo */}
+      <div className="absolute inset-0 bg-[#08080b]/82 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#08080b]/60 via-transparent to-[#08080b]/70 pointer-events-none" />
 
       {/* Indicador proyecto — top right */}
       <div className="absolute top-24 right-6 md:right-10 z-10">
