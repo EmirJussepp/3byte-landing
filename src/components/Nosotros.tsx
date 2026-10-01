@@ -50,10 +50,11 @@ export default function Nosotros() {
             alt="Espacio de trabajo de Grupo 3Byte"
             width={960}
             height={480}
-            className="w-full h-[220px] md:h-[300px] object-cover object-center"
+            className="w-full h-[140px] md:h-[180px] object-cover object-[center_30%]"
             unoptimized
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#09090c]/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[#09090c]/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#09090c] via-transparent to-[#09090c]/40" />
         </div>
       </FadeIn>
 

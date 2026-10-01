@@ -14,8 +14,8 @@ const projects = [
     logoH: 36,
     badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
-    screenshot: "/projects/elite-caja.png",
-    images: [],
+    screenshot: "/projects/elite-dashboard.jpg",
+    images: ["/projects/elite-login.jpg", "/projects/elite-dashboard.jpg"],
   },
   {
     num: "02",
