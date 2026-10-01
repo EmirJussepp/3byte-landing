@@ -15,7 +15,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className={`fixed bottom-6 right-6 z-50 flex items-center gap-2.5 transition-all duration-500 group
+      className={`fixed bottom-8 right-4 md:bottom-6 md:right-6 z-50 flex items-center gap-2.5 transition-all duration-500 group
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
     >
       {/* Tooltip */}
@@ -30,8 +30,6 @@ export default function WhatsAppButton() {
 
       {/* Botón */}
       <div className="relative w-13 h-13">
-        {/* Ping animado */}
-        <span className="absolute inset-0 rounded-full bg-[#25d366]/20 animate-ping" />
         <div className="relative w-13 h-13 bg-[#25d366] hover:bg-[#20bd5a] rounded-full flex items-center justify-center shadow-lg shadow-[#25d366]/20 transition-colors">
           {/* Ícono WhatsApp SVG */}
           <svg
