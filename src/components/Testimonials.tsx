@@ -32,9 +32,11 @@ export default function Testimonials() {
         <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
           clientes
         </div>
-        <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
-          Lo que dicen{" "}
-          <span className="text-[#4a4a62]">quienes lo usan.</span>
+        <h2 className="text-[clamp(2.8rem,7vw,5.5rem)] font-extrabold tracking-[-0.05em] mb-4 leading-[0.94]">
+          Lo que dicen<br />
+          <span className="bg-gradient-to-r from-[#c8daf8] to-[#5b8bff] bg-clip-text text-transparent">
+            quienes lo usan.
+          </span>
         </h2>
         <p className="text-[1rem] text-[#8888a0] mb-14 md:mb-16 leading-[1.8]">
           Negocios de San Francisco que trabajan con sistemas desarrollados por 3Byte.

@@ -110,8 +110,11 @@ export default function Servicios() {
         <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
           servicios
         </div>
-        <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-14 md:mb-16 leading-[1.05]">
-          ¿Qué hacemos?
+        <h2 className="text-[clamp(2.8rem,7vw,5.5rem)] font-extrabold tracking-[-0.05em] mb-12 md:mb-16 leading-[0.94]">
+          ¿Qué{" "}
+          <span className="bg-gradient-to-r from-[#c8daf8] to-[#5b8bff] bg-clip-text text-transparent">
+            hacemos?
+          </span>
         </h2>
       </FadeIn>
 
