@@ -31,7 +31,7 @@ export default function Hero() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section className="relative h-screen min-h-[620px] overflow-hidden flex flex-col justify-end">
+    <section className="relative h-screen min-h-[620px] overflow-hidden flex flex-col justify-center">
 
       {/* Slides de fondo */}
       {slides.map((s, i) => (
@@ -54,9 +54,9 @@ export default function Hero() {
         </motion.div>
       ))}
 
-      {/* Overlay muy oscuro — imagen como textura sutil de fondo */}
-      <div className="absolute inset-0 bg-[#08080b]/82 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#08080b]/60 via-transparent to-[#08080b]/70 pointer-events-none" />
+      {/* Overlay casi negro — imagen como textura apenas perceptible */}
+      <div className="absolute inset-0 bg-[#08080b]/91 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#08080b]/70 via-transparent to-[#08080b]/80 pointer-events-none" />
 
       {/* Indicador proyecto — top right */}
       <div className="absolute top-24 right-6 md:right-10 z-10">
@@ -80,20 +80,20 @@ export default function Hero() {
       </div>
 
       {/* Contenido principal — centrado */}
-      <div className="relative z-10 flex flex-col items-center text-center px-5 md:px-10 pb-20 md:pb-28 max-w-[900px] mx-auto w-full">
+      <div className="relative z-10 flex flex-col items-center text-center px-5 md:px-10 max-w-[900px] mx-auto w-full">
 
         {/* Marca centrada */}
         <motion.div
           initial={{ opacity: 0, y: -12 }}
           animate={loaded ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.05, ease: "easeOut" }}
-          className="flex items-center gap-3 mb-8 md:mb-10"
+          className="flex items-center gap-4 mb-10 md:mb-12"
         >
-          <span className="block w-8 h-[1px] bg-white/20" />
-          <span className="font-mono text-[0.7rem] text-white/40 tracking-[0.22em] uppercase">
+          <span className="block w-12 h-[1px] bg-white/25" />
+          <span className="font-mono text-[0.8rem] text-white/65 tracking-[0.28em] uppercase font-semibold">
             grupo3byte
           </span>
-          <span className="block w-8 h-[1px] bg-white/20" />
+          <span className="block w-12 h-[1px] bg-white/25" />
         </motion.div>
 
         <h1 className="text-[clamp(3rem,9vw,8rem)] font-extrabold tracking-[-0.05em] leading-[0.92] mb-7 md:mb-9">

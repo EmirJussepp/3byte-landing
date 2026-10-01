@@ -11,11 +11,8 @@ const projects = [
     name: "Elite Car-Shop",
     desc: "Gestión completa para autodetailing: ventas, compras, caja, stock, clientes, proveedores y cuenta corriente. Integración con Tienda Nube mediante webhooks bidireccionales.",
     logo: "https://elitecarshopsf.duckdns.org/assets/logoelite-W4eZvBtv.jpg",
-    logoH: 36,
-    badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
-    screenshot: "/projects/elite-dashboard.jpg",
-    images: ["/projects/elite-login.jpg", "/projects/elite-dashboard.jpg"],
+    flyers: [] as string[],
   },
   {
     num: "02",
@@ -23,11 +20,8 @@ const projects = [
     name: "Defyne Center",
     desc: "App de rutinas para gimnasio con modo TV en vivo: la profesora arma la clase desde el celular y se reproduce en la Smart TV con cronómetro automático.",
     logo: "/defyne-logo.jpeg",
-    logoH: 36,
-    badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
-    screenshot: "/projects/defyne-tv.jpg",
-    images: ["/projects/defyne-rutinas.jpg", "/projects/defyne-tv.jpg", "/projects/defyne-ejercicio.jpg", "/projects/defyne-login.jpg"],
+    flyers: [] as string[],
   },
   {
     num: "03",
@@ -35,11 +29,8 @@ const projects = [
     name: "Peña Boquense SF",
     desc: "Sistema para asociación deportiva: socios, cuotas, movimientos de caja y reportes. La comisión directiva administra todo sin depender de terceros.",
     logo: "https://pboquensesf.duckdns.org/assets/logo_pe%C3%B1a-BetDt1YW.png",
-    logoH: 40,
-    badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
-    screenshot: "/projects/pena-dashboard-new.jpg",
-    images: ["/projects/pena-flyer-1.jpg", "/projects/pena-flyer-2.jpg"],
+    flyers: ["/projects/pena-flyer-1.jpg", "/projects/pena-flyer-2.jpg"],
   },
   {
     num: "04",
@@ -47,27 +38,20 @@ const projects = [
     name: "SportByte",
     desc: "Plataforma de reservas para clubes deportivos. Turnos, confirmaciones por WhatsApp, caja del día y estadísticas. Multi-admin, activación en menos de un día.",
     logo: "https://www.sportbyte.com.ar/logosolosportbyte.png",
-    logoH: 38,
-    badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: "https://www.sportbyte.com.ar",
-    screenshot: "/projects/sportbyte.png",
-    images: [],
+    flyers: [] as string[],
   },
 ];
 
 export default function Projects() {
   const [modal, setModal] = useState<{ images: string[]; title: string } | null>(null);
 
-  const handleClick = (p: typeof projects[0]) => {
-    if (p.images.length > 0) setModal({ images: p.images, title: p.name });
-  };
-
   return (
     <>
       <section id="proyectos" className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-8 md:mb-20">
 
         <FadeIn direction="left">
-          <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
+          <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
             proyectos
           </div>
           <h2 className="text-[2.4rem] md:text-[3rem] font-extrabold tracking-[-0.035em] mb-4 leading-[1.05]">
@@ -78,85 +62,80 @@ export default function Projects() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.055] border border-white/[0.055]">
-          {projects.map((p, i) => {
-            const clickable = p.images.length > 0;
-            return (
-              <FadeIn key={i} delay={i * 0.07} className="group bg-[#0d0d11] p-7 flex flex-col gap-5 hover:-translate-y-1 transition-transform duration-300 ease-out">
-                <div className="flex items-center gap-3">
-                  <div className="shrink-0 w-10 h-10 bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5">
-                    <Image
-                      src={p.logo}
-                      alt={p.name}
-                      width={40}
-                      height={p.logoH}
-                      className="object-contain w-full h-full"
-                      unoptimized
-                    />
-                  </div>
-                  <div>
-                    <div className="font-mono text-[0.55rem] text-[#55556a] tracking-[0.1em] uppercase mb-0.5">
-                      {p.num} · {p.cat}
-                    </div>
-                    <div className="text-[1.05rem] font-extrabold tracking-[-0.02em] text-[#eaeaf0] leading-none">
-                      {p.name}
-                    </div>
-                  </div>
+        {/* Lista editorial */}
+        <div className="flex flex-col border-t border-white/[0.07]">
+          {projects.map((p, i) => (
+            <FadeIn
+              key={i}
+              delay={i * 0.08}
+              className="group relative flex flex-col md:flex-row md:items-center gap-6 py-9 border-b border-white/[0.07] overflow-hidden"
+            >
+              {/* Número decorativo */}
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 font-mono font-black text-[7rem] text-white/[0.022] leading-none select-none pointer-events-none">
+                {p.num}
+              </div>
+
+              {/* Número pequeño + logo */}
+              <div className="flex items-center gap-4 md:w-[140px] shrink-0">
+                <span className="font-mono text-[0.5rem] text-[#2e2e3a] tracking-[0.14em] w-5 shrink-0">
+                  {p.num}
+                </span>
+                <div className="w-11 h-11 border border-white/[0.08] group-hover:border-[#5b8bff]/30 transition-colors duration-400 flex items-center justify-center overflow-hidden p-1.5 shrink-0 bg-white/[0.02]">
+                  <Image
+                    src={p.logo}
+                    alt={p.name}
+                    width={44}
+                    height={44}
+                    className="object-contain w-full h-full"
+                    unoptimized
+                  />
                 </div>
+              </div>
 
-                {/* Mini browser mockup */}
-                {p.screenshot && (
-                  <div className="border border-white/[0.07] overflow-hidden">
-                    <div className="bg-[#0f0f16] border-b border-white/[0.05] px-2.5 py-1.5 flex items-center gap-1.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-white/[0.06]" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-white/[0.06]" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-white/[0.06]" />
-                    </div>
-                    <div className="relative aspect-[16/9] overflow-hidden">
-                      <Image
-                        src={p.screenshot}
-                        alt={p.name}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 440px"
-                        className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                        unoptimized
-                      />
-                    </div>
-                  </div>
-                )}
-
-                <p className="flex-1 font-mono text-[0.76rem] text-[#8888a0] leading-[1.85]">
+              {/* Nombre + descripción */}
+              <div className="flex-1 min-w-0">
+                <div className="font-mono text-[0.52rem] text-[#5b8bff]/60 tracking-[0.16em] uppercase mb-2">
+                  {p.cat}
+                </div>
+                <h3 className="text-[1.6rem] md:text-[1.9rem] font-extrabold tracking-[-0.04em] text-[#eaeaf0] leading-none mb-3 group-hover:text-white transition-colors">
+                  {p.name}
+                </h3>
+                <p className="font-mono text-[0.72rem] text-[#55556a] leading-[1.9] max-w-[500px]">
                   {p.desc}
                 </p>
+              </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
-                  <div className={`inline-flex items-center font-mono text-[0.56rem] font-bold px-2 py-1 border border-white/[0.08] bg-white/[0.03] ${p.badge.text}`}>
-                    {p.badge.label}
-                  </div>
-                  <div className="flex items-center gap-3">
-                    {clickable && (
-                      <button
-                        onClick={() => handleClick(p)}
-                        className="font-mono text-[0.62rem] font-bold text-[#55556a] hover:text-[#eaeaf0] transition-colors cursor-pointer"
-                      >
-                        Ver flyers ↗
-                      </button>
-                    )}
-                    {p.href && (
-                      <a
-                        href={p.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-mono text-[0.62rem] font-bold text-[#5b8bff] hover:text-[#7aa3ff] transition-colors"
-                      >
-                        Ver sitio ↗
-                      </a>
-                    )}
-                  </div>
+              {/* Badge + links */}
+              <div className="flex md:flex-col items-start md:items-end gap-3 shrink-0 md:w-[130px]">
+                <span className="font-mono text-[0.52rem] font-bold text-[#5b8bff] border border-[#5b8bff]/20 bg-[#5b8bff]/[0.05] px-2 py-1 shrink-0">
+                  Activo
+                </span>
+                <div className="flex items-center gap-4 md:flex-col md:items-end md:gap-2">
+                  {p.flyers.length > 0 && (
+                    <button
+                      onClick={() => setModal({ images: p.flyers, title: p.name })}
+                      className="font-mono text-[0.6rem] font-bold text-[#44445a] hover:text-[#eaeaf0] transition-colors cursor-pointer whitespace-nowrap"
+                    >
+                      Ver flyers ↗
+                    </button>
+                  )}
+                  {p.href && (
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-[0.6rem] font-bold text-[#5b8bff] hover:text-[#7aa3ff] transition-colors whitespace-nowrap"
+                    >
+                      Ver sitio ↗
+                    </a>
+                  )}
                 </div>
-              </FadeIn>
-            );
-          })}
+              </div>
+
+              {/* Línea de acento en hover */}
+              <div className="absolute bottom-0 left-0 h-[1px] w-0 group-hover:w-full bg-gradient-to-r from-[#5b8bff]/60 to-transparent transition-all duration-600 ease-out" />
+            </FadeIn>
+          ))}
         </div>
       </section>
 
