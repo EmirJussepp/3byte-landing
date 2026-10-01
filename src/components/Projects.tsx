@@ -26,8 +26,8 @@ const projects = [
     logoH: 36,
     badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
-    screenshot: null,
-    images: [],
+    screenshot: "/projects/defyne-tv.jpg",
+    images: ["/projects/defyne-tv.jpg"],
   },
   {
     num: "03",

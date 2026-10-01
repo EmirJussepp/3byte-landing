@@ -6,8 +6,8 @@ import Image from "next/image";
 const slides = [
   { src: "/projects/sportbyte.png",          url: "sportbyte.com.ar" },
   { src: "/projects/pena-dashboard-new.jpg", url: "pboquensesf.duckdns.org" },
+  { src: "/projects/defyne-tv.jpg",          url: "gymdefyne.com.ar · tv" },
   { src: "/projects/elite-dashboard.jpg",    url: "elitecarshopsf.duckdns.org" },
-  { src: "/projects/elite-login.jpg",        url: "elitecarshopsf.duckdns.org · login" },
 ];
 
 export default function HeroVisual() {
