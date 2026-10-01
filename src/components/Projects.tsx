@@ -82,7 +82,7 @@ export default function Projects() {
           {projects.map((p, i) => {
             const clickable = p.images.length > 0;
             return (
-              <FadeIn key={i} delay={i * 0.07} className="group bg-[#0d0d11] p-7 flex flex-col gap-5">
+              <FadeIn key={i} delay={i * 0.07} className="group bg-[#0d0d11] p-7 flex flex-col gap-5 hover:-translate-y-1 transition-transform duration-300 ease-out">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0 w-10 h-10 bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5">
                     <Image

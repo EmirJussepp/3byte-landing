@@ -11,12 +11,14 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackgroundOrbs from "@/components/BackgroundOrbs";
 import Spotlight from "@/components/Spotlight";
+import CursorGlow from "@/components/CursorGlow";
 
 export default function Home() {
   return (
     <>
       <BackgroundOrbs />
       <Spotlight />
+      <CursorGlow />
       <Nav />
       <Hero />
       <TechMarquee />
