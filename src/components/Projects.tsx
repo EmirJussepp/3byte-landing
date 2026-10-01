@@ -14,6 +14,7 @@ const projects = [
     logoH: 36,
     badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
+    screenshot: "/projects/elite-caja.png",
     images: [],
   },
   {
@@ -25,6 +26,7 @@ const projects = [
     logoH: 36,
     badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
+    screenshot: null,
     images: [],
   },
   {
@@ -36,6 +38,7 @@ const projects = [
     logoH: 40,
     badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
+    screenshot: "/projects/pena-dashboard.png",
     images: ["/projects/pena-flyer-1.jpg", "/projects/pena-flyer-2.jpg"],
   },
   {
@@ -47,6 +50,7 @@ const projects = [
     logoH: 38,
     badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: "https://www.sportbyte.com.ar",
+    screenshot: "/projects/sportbyte.png",
     images: [],
   },
 ];
@@ -78,7 +82,7 @@ export default function Projects() {
           {projects.map((p, i) => {
             const clickable = p.images.length > 0;
             return (
-              <FadeIn key={i} delay={i * 0.07} className="bg-[#0d0d11] p-7 flex flex-col gap-5">
+              <FadeIn key={i} delay={i * 0.07} className="group bg-[#0d0d11] p-7 flex flex-col gap-5">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0 w-10 h-10 bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5">
                     <Image
@@ -99,6 +103,27 @@ export default function Projects() {
                     </div>
                   </div>
                 </div>
+
+                {/* Mini browser mockup */}
+                {p.screenshot && (
+                  <div className="border border-white/[0.07] overflow-hidden">
+                    <div className="bg-[#0f0f16] border-b border-white/[0.05] px-2.5 py-1.5 flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/[0.06]" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/[0.06]" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/[0.06]" />
+                    </div>
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <Image
+                        src={p.screenshot}
+                        alt={p.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 440px"
+                        className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                        unoptimized
+                      />
+                    </div>
+                  </div>
+                )}
 
                 <p className="flex-1 font-mono text-[0.76rem] text-[#8888a0] leading-[1.85]">
                   {p.desc}

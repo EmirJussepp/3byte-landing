@@ -1,4 +1,5 @@
 import FadeIn from "./FadeIn";
+import Image from "next/image";
 
 const valores = [
   {
@@ -34,14 +35,29 @@ export default function Nosotros() {
           Un grupo pequeño<br />
           <span className="text-[#2e2e3a]">que hace las cosas bien.</span>
         </h2>
-        <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-14 md:mb-16 max-w-[520px] leading-[1.9]">
+        <p className="font-mono text-[0.85rem] md:text-[0.9rem] text-[#8888a0] mb-10 max-w-[520px] leading-[1.9]">
           Somos un equipo de San Francisco, Córdoba. Nos conocemos hace años
           y trabajamos juntos en cada proyecto. Eso nos permite cuidar los
           detalles y responder con nombre propio.
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.055] border border-white/[0.055]">
+      {/* Imagen oficina */}
+      <FadeIn>
+        <div className="relative w-full overflow-hidden border border-white/[0.07] mb-px">
+          <Image
+            src="/oficina-3byte.jpg"
+            alt="Espacio de trabajo de Grupo 3Byte"
+            width={960}
+            height={480}
+            className="w-full h-[220px] md:h-[300px] object-cover object-center"
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#09090c]/60 via-transparent to-transparent" />
+        </div>
+      </FadeIn>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/[0.055] border border-white/[0.055] border-t-0">
         {valores.map((v, i) => (
           <FadeIn key={i} delay={i * 0.07} className="bg-[#0d0d11] p-7 flex gap-5">
             <span className="font-mono text-[0.6rem] text-[#2e2e3a] mt-1 shrink-0 w-6">{v.n}</span>
