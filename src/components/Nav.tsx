@@ -55,24 +55,24 @@ export default function Nav() {
           scrolled ? "bg-[#08080b]/80 backdrop-blur-xl border-b border-white/[0.06]" : ""
         }`}
       >
-        <div className="max-w-[1040px] mx-auto px-6 md:px-10 py-5 md:py-6 flex items-center justify-between">
+        <div className="max-w-[1040px] mx-auto px-6 md:px-10 py-5 md:py-7 flex items-center justify-between">
 
           {/* Logo */}
           <button
             onClick={() => scrollTo("top")}
-            className="flex items-center gap-3 group cursor-pointer"
+            className="flex items-center gap-3.5 group cursor-pointer"
           >
-            <div className="w-8 h-8 overflow-hidden border border-white/[0.1] group-hover:border-white/[0.2] transition-colors">
+            <div className="w-11 h-11 overflow-hidden border border-white/[0.1] group-hover:border-white/[0.25] transition-colors shrink-0">
               <Image
                 src="https://pboquensesf.duckdns.org/assets/logochico-DCu-UpDX.png"
                 alt="3Byte"
-                width={32}
-                height={32}
+                width={44}
+                height={44}
                 className="object-contain w-full h-full"
                 unoptimized
               />
             </div>
-            <span className="font-mono text-[1rem] font-bold tracking-tight text-[#eaeaf0] group-hover:text-white transition-colors">
+            <span className="font-mono text-[1.15rem] font-bold tracking-tight text-[#eaeaf0] group-hover:text-white transition-colors">
               grupo3byte
             </span>
           </button>
@@ -81,25 +81,25 @@ export default function Nav() {
           <button
             onClick={() => setOpen(!open)}
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
-            className="relative z-[60] flex flex-col justify-center gap-[6px] p-2 cursor-pointer"
+            className="relative z-[60] flex flex-col justify-center gap-[7px] p-3 cursor-pointer"
           >
             <motion.span
-              animate={open ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }}
+              animate={open ? { rotate: 45, y: 10 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.28, ease: "easeInOut" }}
-              className="block h-[2px] bg-[#eaeaf0] origin-center"
-              style={{ width: 26 }}
+              className="block bg-[#eaeaf0] origin-center"
+              style={{ width: 32, height: 2.5 }}
             />
             <motion.span
-              animate={open ? { opacity: 0, x: 8 } : { opacity: 1, x: 0 }}
+              animate={open ? { opacity: 0, x: 10 } : { opacity: 1, x: 0 }}
               transition={{ duration: 0.2 }}
-              className="block h-[2px] bg-[#eaeaf0]"
-              style={{ width: 18 }}
+              className="block bg-[#eaeaf0]"
+              style={{ width: 22, height: 2.5 }}
             />
             <motion.span
-              animate={open ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }}
+              animate={open ? { rotate: -45, y: -10 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.28, ease: "easeInOut" }}
-              className="block h-[2px] bg-[#eaeaf0] origin-center"
-              style={{ width: 26 }}
+              className="block bg-[#eaeaf0] origin-center"
+              style={{ width: 32, height: 2.5 }}
             />
           </button>
         </div>
