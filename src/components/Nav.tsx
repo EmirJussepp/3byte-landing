@@ -57,18 +57,20 @@ export default function Nav() {
       >
         <div className="w-full px-6 md:px-10 py-5 md:py-7 flex items-center justify-between">
 
-          {/* Logo — solo ícono */}
+          {/* Logo — solo ícono, grande */}
           <button
             onClick={() => scrollTo("top")}
             className="group cursor-pointer"
             aria-label="Inicio"
           >
-            <div className="w-12 h-12 overflow-hidden border border-white/[0.12] group-hover:border-white/[0.3] transition-colors">
+            <div className="w-16 h-16 overflow-hidden border border-white/[0.12] group-hover:border-[#5b8bff]/40 transition-all duration-300"
+              style={{ boxShadow: "0 0 0 0 transparent" }}
+            >
               <Image
                 src="https://pboquensesf.duckdns.org/assets/logochico-DCu-UpDX.png"
                 alt="3Byte"
-                width={48}
-                height={48}
+                width={64}
+                height={64}
                 className="object-contain w-full h-full"
                 unoptimized
               />

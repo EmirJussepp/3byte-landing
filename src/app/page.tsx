@@ -12,9 +12,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import BackgroundOrbs from "@/components/BackgroundOrbs";
 import Spotlight from "@/components/Spotlight";
 import CursorGlow from "@/components/CursorGlow";
+import PageLoader from "@/components/PageLoader";
 export default function Home() {
   return (
     <>
+      <PageLoader />
       <BackgroundOrbs />
       <Spotlight />
       <CursorGlow />
