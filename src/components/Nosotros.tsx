@@ -26,7 +26,7 @@ const valores = [
 
 export default function Nosotros() {
   return (
-    <section id="nosotros" className="px-5 md:px-8 py-8 md:py-14 max-w-[960px] mx-auto mb-12 md:mb-36">
+    <section id="nosotros" className="px-5 md:px-8 py-8 md:py-14 max-w-[960px] mx-auto mb-8 md:mb-20">
       <FadeIn direction="left">
         <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
           quiénes somos

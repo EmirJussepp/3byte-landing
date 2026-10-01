@@ -24,7 +24,7 @@ export default function HeroVisual() {
       <div aria-hidden className="absolute -inset-8 bg-[#5b8bff]/[0.05] blur-[60px] pointer-events-none" />
 
       {/* Browser mockup */}
-      <div className="relative border border-white/[0.09] overflow-hidden shadow-2xl shadow-black/50">
+      <div className="relative border border-[#5b8bff]/20 overflow-hidden shadow-[0_0_80px_rgba(91,139,255,0.14),0_2px_32px_rgba(0,0,0,0.8)]">
 
         {/* Chrome bar */}
         <div className="bg-[#0f0f16] border-b border-white/[0.07] px-3 py-2.5 flex items-center gap-2.5">

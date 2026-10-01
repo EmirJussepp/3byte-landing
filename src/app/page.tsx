@@ -12,6 +12,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import BackgroundOrbs from "@/components/BackgroundOrbs";
 import Spotlight from "@/components/Spotlight";
 import CursorGlow from "@/components/CursorGlow";
+import StatsBar from "@/components/StatsBar";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <TechMarquee />
+      <StatsBar />
       <Servicios />
       <Projects />
       <Testimonials />

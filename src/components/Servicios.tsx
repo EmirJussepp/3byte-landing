@@ -88,7 +88,7 @@ function BentoCard({ children, className }: { children: React.ReactNode; classNa
     <div
       ref={ref}
       onMouseMove={onMouseMove}
-      className={`group relative overflow-hidden bg-[#0d0d11] border-r border-b border-white/[0.055] p-7 flex flex-col gap-5 min-h-[180px] ${className ?? ""}`}
+      className={`group relative overflow-hidden bg-[#0e0e18] border-r border-b border-white/[0.1] p-7 flex flex-col gap-5 min-h-[180px] ${className ?? ""}`}
       style={{ "--mx": "50%", "--my": "50%" } as React.CSSProperties}
     >
       <div
@@ -105,7 +105,7 @@ function BentoCard({ children, className }: { children: React.ReactNode; classNa
 
 export default function Servicios() {
   return (
-    <section className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-12 md:mb-36">
+    <section className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-8 md:mb-20">
       <FadeIn direction="left">
         <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
           servicios
@@ -115,15 +115,15 @@ export default function Servicios() {
         </h2>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 border-l border-t border-white/[0.055]">
+      <div className="grid grid-cols-1 md:grid-cols-3 border-l border-t border-white/[0.1]">
         {servicios.map((s, i) => (
           <FadeIn key={i} delay={i * 0.07} className={s.span}>
             <BentoCard className="h-full">
               <div className="flex items-start justify-between">
-                <div className="text-[#5b8bff] opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-[#5b8bff] opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                   {s.icon}
                 </div>
-                <span className="font-mono text-[0.55rem] text-[#2e2e3a] tracking-[0.1em]">{s.n}</span>
+                <span className="font-mono text-[0.55rem] text-[#3e3e50] tracking-[0.1em]">{s.n}</span>
               </div>
               <div className="mt-auto">
                 <div className="text-[0.9rem] font-bold text-[#eaeaf0] mb-2 leading-snug">{s.title}</div>

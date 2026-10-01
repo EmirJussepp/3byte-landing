@@ -15,7 +15,7 @@ export default function TechMarquee() {
   const doubled = [...techs, ...techs];
 
   return (
-    <div className="w-full overflow-hidden border-y border-white/[0.055] py-[13px] mb-10 md:mb-28 select-none">
+    <div className="w-full overflow-hidden border-y border-white/[0.055] py-[13px] mb-6 md:mb-16 select-none">
       <div className="flex w-fit animate-marquee">
         {doubled.map((t, i) => (
           <span
