@@ -38,7 +38,7 @@ const projects = [
     logoH: 40,
     badge: { label: "Activo", text: "text-[#5b8bff]" },
     href: null,
-    screenshot: "/projects/pena-dashboard.png",
+    screenshot: "/projects/pena-dashboard-new.jpg",
     images: ["/projects/pena-flyer-1.jpg", "/projects/pena-flyer-2.jpg"],
   },
   {

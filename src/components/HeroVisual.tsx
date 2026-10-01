@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const slides = [
-  { src: "/projects/sportbyte.png",      url: "sportbyte.com.ar" },
-  { src: "/projects/pena-dashboard.png", url: "pboquensesf.duckdns.org" },
-  { src: "/projects/elite-caja.png",     url: "elitecarshopsf.duckdns.org" },
+  { src: "/projects/sportbyte.png",           url: "sportbyte.com.ar" },
+  { src: "/projects/pena-dashboard-new.jpg",  url: "pboquensesf.duckdns.org" },
+  { src: "/projects/pena-login-new.jpg",      url: "pboquensesf.duckdns.org · login" },
+  { src: "/projects/elite-caja.png",          url: "elitecarshopsf.duckdns.org" },
 ];
 
 export default function HeroVisual() {
