@@ -5,10 +5,10 @@ import Image from "next/image";
 import MagneticButton from "./MagneticButton";
 
 const slides = [
-  { src: "/projects/pena-dashboard-new.jpg",  project: "Peña Boquense SF",  cat: "Sistema de socios" },
-  { src: "/projects/sportbyte.png",            project: "SportByte",          cat: "Plataforma SaaS" },
-  { src: "/projects/defyne-rutinas.jpg",       project: "Defyne Center",      cat: "App de rutinas" },
-  { src: "/projects/elite-dashboard.jpg",      project: "Elite Car-Shop",     cat: "Sistema de gestión" },
+  { src: "/projects/pena-v2.jpg",          project: "Peña Boquense SF", cat: "Sistema de socios" },
+  { src: "/projects/elite-v2.jpg",         project: "Elite Car-Shop",   cat: "Sistema de gestión" },
+  { src: "/projects/defyne-rutinas-v2.jpg",project: "Defyne Center",    cat: "App de rutinas" },
+  { src: "/projects/sportbyte-caja.jpg",   project: "SportByte",        cat: "Plataforma deportiva" },
 ];
 
 const ease = [0.22, 1, 0.36, 1] as const;
