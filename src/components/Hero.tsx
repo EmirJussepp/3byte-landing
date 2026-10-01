@@ -6,13 +6,7 @@ import MagneticButton from "./MagneticButton";
 const line1 = ["Tu", "negocio", "merece"];
 const line2 = ["un", "sistema", "propio."];
 
-const wordVariant = {
-  hidden: { opacity: 0, y: 22, filter: "blur(10px)" },
-  visible: (i: number) => ({
-    opacity: 1, y: 0, filter: "blur(0px)",
-    transition: { duration: 0.65, delay: 0.2 + i * 0.11, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
   const scrollTo = (id: string) =>
@@ -26,14 +20,13 @@ export default function Hero() {
         <div>
           <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[1.02] tracking-[-0.045em] mb-8">
             {/* Línea 1 */}
-            <span className="block text-[#eaeaf0]" aria-hidden="false">
+            <span className="block text-[#eaeaf0]">
               {line1.map((word, i) => (
                 <motion.span
                   key={word}
-                  custom={i}
-                  initial="hidden"
-                  animate="visible"
-                  variants={wordVariant}
+                  initial={{ opacity: 0, y: 22, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ duration: 0.65, delay: 0.2 + i * 0.11, ease }}
                   className="inline-block mr-[0.22em]"
                 >
                   {word}
@@ -42,14 +35,13 @@ export default function Hero() {
             </span>
 
             {/* Línea 2 — gradiente azul */}
-            <span className="block" aria-hidden="false">
+            <span className="block">
               {line2.map((word, i) => (
                 <motion.span
                   key={word}
-                  custom={line1.length + i}
-                  initial="hidden"
-                  animate="visible"
-                  variants={wordVariant}
+                  initial={{ opacity: 0, y: 22, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{ duration: 0.65, delay: 0.2 + (line1.length + i) * 0.11, ease }}
                   className="inline-block mr-[0.22em] bg-gradient-to-r from-[#c8daf8] to-[#5b8bff] bg-clip-text text-transparent"
                 >
                   {word}
