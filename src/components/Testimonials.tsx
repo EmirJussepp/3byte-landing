@@ -29,43 +29,35 @@ export default function Testimonials() {
   return (
     <section className="px-5 md:px-8 py-8 md:py-14 max-w-[1040px] mx-auto mb-8 md:mb-20">
       <FadeIn direction="left">
-        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 rounded-none border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
+        <div className="inline-flex items-center font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-5 px-3 py-1 border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06]">
           clientes
         </div>
-        <h2 className="text-[clamp(2.8rem,7vw,5.5rem)] font-extrabold tracking-[-0.05em] mb-4 leading-[0.94]">
+        <h2 className="text-[clamp(2.8rem,7vw,5.5rem)] font-extrabold tracking-[-0.05em] mb-12 md:mb-16 leading-[0.94]">
           Lo que dicen<br />
           <span className="bg-gradient-to-r from-[#c8daf8] to-[#5b8bff] bg-clip-text text-transparent">
             quienes lo usan.
           </span>
         </h2>
-        <p className="text-[1rem] text-[#8888a0] mb-14 md:mb-16 leading-[1.8]">
-          Negocios de San Francisco que trabajan con sistemas desarrollados por 3Byte.
-        </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+      <div className="flex flex-col border-t border-white/[0.07]">
         {testimonials.map((t, i) => (
           <FadeIn
             key={i}
-            delay={i * 0.08}
-            className="rounded-none border border-white/[0.07] bg-[#0d0d11] p-7 flex flex-col"
+            delay={i * 0.09}
+            className="group flex flex-col md:flex-row gap-8 md:gap-14 py-10 border-b border-white/[0.07] relative"
           >
-            {/* Comilla grande — caracter real con gradiente, sin SVG roto */}
-            <div
-              className="text-[3.8rem] font-bold leading-none mb-4 select-none bg-gradient-to-br from-[#5b8bff] to-[#5b8bff] bg-clip-text text-transparent"
-              aria-hidden="true"
-            >
-              &ldquo;
-            </div>
+            {/* Línea azul vertical en hover */}
+            <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-[#5b8bff]/0 to-transparent group-hover:via-[#5b8bff]/35 transition-all duration-500" />
 
-            {/* Cita */}
-            <p className="flex-1 text-[0.95rem] text-[#b8b8cc] leading-[1.82] mb-8">
-              {t.quote}
+            {/* Cita — protagonista */}
+            <p className="flex-1 text-[1rem] md:text-[1.08rem] text-[#8888a0] leading-[1.82] group-hover:text-[#b0b0c4] transition-colors duration-300 italic">
+              "{t.quote}"
             </p>
 
             {/* Firma */}
-            <div className="flex items-center gap-3 pt-5 border-t border-white/[0.06]">
-              <div className="w-10 h-10 rounded-none bg-white/[0.04] border border-white/[0.07] flex items-center justify-center overflow-hidden p-1.5 shrink-0">
+            <div className="flex md:flex-col items-center md:items-start gap-4 md:gap-3 md:w-[160px] shrink-0 md:pt-1">
+              <div className="w-10 h-10 border border-white/[0.08] flex items-center justify-center overflow-hidden p-1 shrink-0 bg-white/[0.02]">
                 <Image
                   src={t.logo}
                   alt={t.author}
@@ -76,10 +68,10 @@ export default function Testimonials() {
                 />
               </div>
               <div>
-                <div className="text-[0.88rem] font-semibold text-[#eaeaf0] leading-tight">
+                <div className="text-[0.82rem] font-bold text-[#c0c0d8] leading-tight group-hover:text-white transition-colors">
                   {t.author}
                 </div>
-                <div className="text-[0.75rem] text-[#55556a] mt-0.5 leading-tight">
+                <div className="font-mono text-[0.6rem] text-[#44445a] mt-1 leading-snug">
                   {t.role}
                 </div>
               </div>
