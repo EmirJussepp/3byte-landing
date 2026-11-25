@@ -12,31 +12,16 @@ export default function Spotlight() {
 
   useEffect(() => {
     if (window.matchMedia("(pointer: coarse)").matches) return;
-
-    let x = window.innerWidth / 2;
-    let y = window.innerHeight * 0.3;
-    let raf = 0;
+    const el = ref.current;
+    if (!el) return;
 
     const onMove = (e: MouseEvent) => {
-      x = e.clientX;
-      y = e.clientY;
-    };
-
-    const loop = () => {
-      if (ref.current) {
-        ref.current.style.setProperty("--mx", `${x}px`);
-        ref.current.style.setProperty("--my", `${y}px`);
-      }
-      raf = requestAnimationFrame(loop);
+      el.style.setProperty("--mx", `${e.clientX}px`);
+      el.style.setProperty("--my", `${e.clientY}px`);
     };
 
     window.addEventListener("mousemove", onMove, { passive: true });
-    raf = requestAnimationFrame(loop);
-
-    return () => {
-      window.removeEventListener("mousemove", onMove);
-      cancelAnimationFrame(raf);
-    };
+    return () => window.removeEventListener("mousemove", onMove);
   }, []);
 
   return (

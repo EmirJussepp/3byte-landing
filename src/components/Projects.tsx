@@ -108,7 +108,6 @@ function LogoBox({ p, accent }: { p: Project; accent: string }) {
           width={56}
           height={56}
           className="object-contain w-full h-full"
-          unoptimized
           style={p.blend ? { mixBlendMode: "lighten" } : undefined}
         />
       </div>
@@ -336,9 +335,9 @@ export default function Projects() {
                   width={260}
                   height={260}
                   className="w-[180px] h-[180px] md:w-[240px] md:h-[240px] object-contain drop-shadow-2xl"
-                  unoptimized
                   style={{ mixBlendMode: "lighten" }}
                 />
+
               </motion.div>
 
               {/* Label */}

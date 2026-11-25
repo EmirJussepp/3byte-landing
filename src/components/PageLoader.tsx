@@ -7,14 +7,8 @@ export default function PageLoader() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const done = () => setTimeout(() => setVisible(false), 350);
-    if (document.readyState === "complete") {
-      done();
-    } else {
-      window.addEventListener("load", done, { once: true });
-      const fallback = setTimeout(() => setVisible(false), 3500);
-      return () => clearTimeout(fallback);
-    }
+    const timer = setTimeout(() => setVisible(false), 600);
+    return () => clearTimeout(timer);
   }, []);
 
   return (

@@ -1,19 +1,22 @@
+import dynamic from "next/dynamic";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Servicios from "@/components/Servicios";
-import Outcomes from "@/components/Outcomes";
-import Modalidades from "@/components/Modalidades";
 import TechMarquee from "@/components/TechMarquee";
-import Projects from "@/components/Projects";
-import Proceso from "@/components/Proceso";
-import Nosotros from "@/components/Nosotros";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import BackgroundOrbs from "@/components/BackgroundOrbs";
 import Spotlight from "@/components/Spotlight";
 import CursorGlow from "@/components/CursorGlow";
 import PageLoader from "@/components/PageLoader";
+
+const Outcomes   = dynamic(() => import("@/components/Outcomes"));
+const Servicios  = dynamic(() => import("@/components/Servicios"));
+const Modalidades = dynamic(() => import("@/components/Modalidades"));
+const Projects   = dynamic(() => import("@/components/Projects"));
+const Proceso    = dynamic(() => import("@/components/Proceso"));
+const Nosotros   = dynamic(() => import("@/components/Nosotros"));
+const Contact    = dynamic(() => import("@/components/Contact"));
+const Footer     = dynamic(() => import("@/components/Footer"));
+const WhatsAppButton = dynamic(() => import("@/components/WhatsAppButton"));
+
 export default function Home() {
   return (
     <>
