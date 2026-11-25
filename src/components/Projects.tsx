@@ -11,6 +11,7 @@ type Project = {
   name: string;
   desc: string;
   logo: string | null;
+  blend?: boolean;
   initials?: string;
   href: string | null;
   flyers: string[];
@@ -63,8 +64,8 @@ const projects: Project[] = [
     cat: "Producto SaaS propio",
     name: "FitByte",
     desc: "Sistema de gestión para centros fitness y gimnasios: socios, cuotas, accesos y estadísticas. Pensado para crecer con cada cliente.",
-    logo: null,
-    initials: "FB",
+    logo: "/fitbyte-logo.webp",
+    blend: true,
     href: null,
     flyers: [],
     status: "En desarrollo",
@@ -74,8 +75,8 @@ const projects: Project[] = [
     cat: "Sistema a medida",
     name: "SRO",
     desc: "Sistema de gestión integral con stack de diseño moderno: flujos internos, paneles de control y administración de operaciones desde una sola plataforma.",
-    logo: null,
-    initials: "SRO",
+    logo: "/sro-logo.png",
+    blend: false,
     href: null,
     flyers: [],
     status: "Activo",
@@ -85,8 +86,8 @@ const projects: Project[] = [
     cat: "Branding",
     name: "LOGOS",
     desc: "Diseño de identidad visual para clientes de distintos rubros: logotipos, paletas de color, tipografías y aplicación en materiales digitales e impresos.",
-    logo: null,
-    initials: "LG",
+    logo: "/logos-logo.webp",
+    blend: true,
     href: null,
     flyers: [],
     status: "Activo",
@@ -97,7 +98,15 @@ function LogoBox({ p }: { p: Project }) {
   if (p.logo) {
     return (
       <div className="w-12 h-12 border border-white/[0.1] group-hover:border-[#5b8bff]/40 transition-colors duration-400 flex items-center justify-center overflow-hidden p-1.5 bg-white/[0.03]">
-        <Image src={p.logo} alt={p.name} width={48} height={48} className="object-contain w-full h-full" unoptimized />
+        <Image
+          src={p.logo}
+          alt={p.name}
+          width={48}
+          height={48}
+          className="object-contain w-full h-full"
+          unoptimized
+          style={p.blend ? { mixBlendMode: "lighten" } : undefined}
+        />
       </div>
     );
   }
