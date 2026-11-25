@@ -5,7 +5,6 @@ import Outcomes from "@/components/Outcomes";
 import Modalidades from "@/components/Modalidades";
 import TechMarquee from "@/components/TechMarquee";
 import Projects from "@/components/Projects";
-import Testimonials from "@/components/Testimonials";
 import Proceso from "@/components/Proceso";
 import Nosotros from "@/components/Nosotros";
 import Contact from "@/components/Contact";
@@ -29,7 +28,6 @@ export default function Home() {
       <Servicios />
       <Modalidades />
       <Projects />
-      <Testimonials />
       <Proceso />
       <Nosotros />
       <Contact />

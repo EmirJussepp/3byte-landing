@@ -55,9 +55,10 @@ export default function Nosotros() {
         </p>
       </FadeIn>
 
-      {/* Imagen oficina */}
+      {/* Bloque de imágenes: oficina + comentarios */}
       <FadeIn>
-        <div className="relative w-full overflow-hidden border border-white/[0.07] mb-px">
+        {/* Oficina — banner superior */}
+        <div className="relative w-full overflow-hidden border border-b-0 border-white/[0.07]">
           <Image
             src="/oficina-3byte.jpg"
             alt="Espacio de trabajo de Grupo 3Byte"
@@ -68,6 +69,34 @@ export default function Nosotros() {
           />
           <div className="absolute inset-0 bg-[#09090c]/80" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#09090c] via-transparent to-[#09090c]/40" />
+        </div>
+
+        {/* Comentarios reales — dos capturas pegadas */}
+        <div className="grid grid-cols-2 border border-white/[0.07] mb-px">
+          <div className="relative overflow-hidden border-r border-white/[0.07]">
+            <Image
+              src="/social-1.jpg"
+              alt="Comentarios de clientes"
+              width={480}
+              height={700}
+              className="w-full h-[220px] md:h-[290px] object-cover object-top"
+              unoptimized
+            />
+            <div className="absolute inset-0 bg-[#09090c]/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#09090c]/60 via-transparent to-[#09090c]/10" />
+          </div>
+          <div className="relative overflow-hidden">
+            <Image
+              src="/social-2.jpg"
+              alt="Comentarios de clientes"
+              width={480}
+              height={700}
+              className="w-full h-[220px] md:h-[290px] object-cover object-top"
+              unoptimized
+            />
+            <div className="absolute inset-0 bg-[#09090c]/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#09090c]/60 via-transparent to-[#09090c]/10" />
+          </div>
         </div>
       </FadeIn>
 
