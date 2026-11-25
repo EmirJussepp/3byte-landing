@@ -1,6 +1,8 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Servicios from "@/components/Servicios";
+import Outcomes from "@/components/Outcomes";
+import Modalidades from "@/components/Modalidades";
 import TechMarquee from "@/components/TechMarquee";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
@@ -23,7 +25,9 @@ export default function Home() {
       <Nav />
       <Hero />
       <TechMarquee />
+      <Outcomes />
       <Servicios />
+      <Modalidades />
       <Projects />
       <Testimonials />
       <Proceso />

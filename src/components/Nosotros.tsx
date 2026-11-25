@@ -1,6 +1,21 @@
 import FadeIn from "./FadeIn";
 import Image from "next/image";
 
+const diferenciales = [
+  {
+    title: "Asesoramiento operativo",
+    desc: "Recomendaciones para mejorar la organización y los procesos internos, más allá del software que entregamos.",
+  },
+  {
+    title: "Experiencia de mercado",
+    desc: "Observaciones y criterios construidos desde el trabajo con distintas empresas, rubros y actividades.",
+  },
+  {
+    title: "Optimización continua",
+    desc: "Identificamos oportunidades de mejora y adaptación a medida que el negocio evoluciona.",
+  },
+];
+
 const valores = [
   {
     title: "Comprometidos con cada proyecto",
@@ -75,6 +90,32 @@ export default function Nosotros() {
           </FadeIn>
         ))}
       </div>
+
+      {/* También brindamos */}
+      <FadeIn>
+        <div className="mt-14 md:mt-16 border-t border-white/[0.07] pt-10">
+          <div className="font-mono text-[0.6rem] text-[#5b8bff] tracking-[0.18em] uppercase mb-8 px-3 py-1 border border-[#5b8bff]/25 bg-[#5b8bff]/[0.06] inline-flex">
+            también brindamos
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-l border-t border-white/[0.07]">
+            {diferenciales.map((d, i) => (
+              <FadeIn key={i} delay={i * 0.07}>
+                <div className="group border-r border-b border-white/[0.07] px-6 py-7 relative overflow-hidden">
+                  {/* Acento hover */}
+                  <div className="absolute bottom-0 left-0 h-[1px] w-0 group-hover:w-full bg-gradient-to-r from-[#a78bfa]/50 to-transparent transition-all duration-500 ease-out" />
+
+                  <h4 className="text-[0.95rem] font-bold tracking-[-0.02em] text-[#9090a8] group-hover:text-white transition-colors duration-250 leading-snug mb-3">
+                    {d.title}
+                  </h4>
+                  <p className="font-mono text-[0.68rem] text-[#44445a] leading-[1.9] group-hover:text-[#6a6a80] transition-colors duration-300">
+                    {d.desc}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </FadeIn>
     </section>
   );
 }
